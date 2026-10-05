@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 630" role="img" aria-label="Diagrama entidade relacionamento da clínica veterinária">
+<rect width="1100" height="630" fill="white"/>
+<g fill="#eaf5fc" stroke="#005ca9" stroke-width="2">
+<rect x="20" y="30" width="270" height="230" rx="8"/><rect x="360" y="30" width="310" height="230" rx="8"/>
+<rect x="780" y="30" width="300" height="255" rx="8"/><rect x="450" y="365" width="350" height="245" rx="8"/>
+</g><g font-family="Arial" fill="#172533" font-size="18">
+<text x="40" y="62" font-weight="bold">USUARIO</text><text x="40" y="98">PK Id: int</text><text x="40" y="130">Nome: nvarchar(100)</text><text x="40" y="160">Email: nvarchar(150) UNIQUE</text><text x="40" y="190">SenhaHash: nvarchar(max)</text><text x="40" y="220">Perfil: nvarchar(30)</text>
+<text x="380" y="62" font-weight="bold">TUTOR</text><text x="380" y="98">PK Id: int</text><text x="380" y="130">Nome: nvarchar(120)</text><text x="380" y="160">CpfCriptografado: nvarchar(max)</text><text x="380" y="190">Telefone: nvarchar(20)</text><text x="380" y="220">Email: nvarchar(150)</text>
+<text x="800" y="62" font-weight="bold">PET</text><text x="800" y="98">PK Id: int</text><text x="800" y="130">Nome: nvarchar(80)</text><text x="800" y="160">Especie: nvarchar(50)</text><text x="800" y="190">Raca: nvarchar(80) NULL</text><text x="800" y="220">DataNascimento: datetime2 NULL</text><text x="800" y="250">FK TutorId: int NOT NULL</text>
+<text x="470" y="398" font-weight="bold">AGENDAMENTO</text><text x="470" y="432">PK Id: int</text><text x="470" y="464">DataHora: datetime2 NOT NULL</text><text x="470" y="496">Motivo: nvarchar(200)</text><text x="470" y="528">Status: nvarchar(30)</text><text x="470" y="560">FK TutorId: int NOT NULL</text><text x="470" y="592">FK PetId: int NOT NULL</text>
+</g><g stroke="#005ca9" stroke-width="3" fill="none"><path d="M670 130H780"/><path d="M500 260V365"/><path d="M930 285V480H800"/></g>
+<g font-family="Arial" fill="#005ca9" font-size="20" font-weight="bold"><text x="680" y="117">1</text><text x="741" y="117">0..N</text><text x="510" y="285">1</text><text x="510" y="350">0..N</text><text x="941" y="309">1</text><text x="808" y="466">0..N</text></g></svg>

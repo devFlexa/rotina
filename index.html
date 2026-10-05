@@ -1,0 +1,1132 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SAEP — Clínica Veterinária | Roteiro refinado e testado</title><style>
+:root{--blue:#005ca9;--deep:#003d6b;--sky:#eaf5fc;--orange:#f58220;--ink:#172533;--muted:#607080;--line:#dce5eb;--bg:#f3f7fa;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65}a{color:inherit}
+.hero{background:linear-gradient(135deg,var(--deep),var(--blue));color:white;padding:64px 28px 72px;border-bottom:7px solid var(--orange)}.hero .inner{max-width:1180px;margin:auto}.eyebrow{display:inline-block;background:#ffffff1c;border:1px solid #ffffff35;border-radius:999px;padding:7px 12px;font-weight:700;font-size:.78rem;letter-spacing:.08em}h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.04;margin:18px 0 14px;max-width:850px}.hero p{font-size:1.08rem;color:#e7f4fc;max-width:800px}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.chip{background:white;color:var(--deep);padding:8px 12px;border-radius:10px;font-weight:700;font-size:.88rem}.chip.accent{background:var(--orange);color:white}
+.layout{max-width:1280px;margin:-36px auto 60px;padding:0 20px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;align-items:start}aside{position:sticky;top:16px;background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 30px #1234}aside h3{margin:0 0 12px;color:var(--deep)}nav{max-height:78vh;overflow:auto;padding-right:5px}nav a{display:flex;gap:10px;align-items:center;text-decoration:none;padding:9px;border-radius:9px;color:#415364;font-size:.86rem}nav a:hover{background:var(--sky);color:var(--blue)}nav span{min-width:29px;height:29px;border-radius:8px;background:var(--sky);color:var(--blue);display:grid;place-items:center;font-weight:800;font-size:.75rem}
+main{min-width:0}.introgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}.info{background:white;border:1px solid var(--line);border-radius:14px;padding:18px;border-top:4px solid var(--blue)}.info strong{display:block;color:var(--deep);font-size:1.05rem}.info span{color:var(--muted);font-size:.9rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:0 0 22px;overflow:hidden;box-shadow:0 8px 25px rgba(0,50,90,.05)}.stephead{display:flex;align-items:center;gap:14px;padding:22px 26px;background:linear-gradient(90deg,#f7fbfe,#fff);border-bottom:1px solid var(--line)}.num{width:48px;height:48px;border-radius:13px;background:var(--blue);color:white;display:grid;place-items:center;font-weight:900}.stephead small{color:var(--orange);font-weight:900;letter-spacing:.12em}h2{margin:0;color:var(--deep);font-size:1.45rem}.content{padding:24px 28px}.content p{margin:0 0 15px}.content ul{background:#f8fbfd;border-left:4px solid var(--orange);padding:14px 20px 14px 38px;border-radius:8px}pre{position:relative;background:#0d1720;color:#e9f4fb;border-radius:12px;padding:20px;overflow:auto;line-height:1.55;font-size:.88rem;box-shadow:inset 0 1px 0 #ffffff18}pre:before{content:'CÓDIGO';display:block;color:#7fb9dd;font:700 .68rem Segoe UI,Arial;letter-spacing:.13em;margin-bottom:12px}code{font-family:Cascadia Code,Consolas,monospace}.back{display:inline-block;margin:0 28px 22px;color:var(--blue);font-weight:700;text-decoration:none;font-size:.85rem}
+.tip{background:#fff8ef;border:1px solid #ffd7ad;border-left:5px solid var(--orange);border-radius:10px;padding:15px}footer{text-align:center;color:var(--muted);padding:28px}
+@media(max-width:900px){.layout{grid-template-columns:1fr;margin-top:-25px}aside{position:relative;top:0}nav{display:grid;grid-template-columns:repeat(2,1fr);max-height:none}.introgrid{grid-template-columns:1fr}}@media(max-width:560px){.hero{padding:42px 20px 55px}.layout{padding:0 12px}nav{grid-template-columns:1fr}.content{padding:20px}.stephead{padding:18px}}
+@media print{aside,.back{display:none}.layout{display:block;margin:0;max-width:none}.hero{background:white;color:black;padding:20px;border-bottom:3px solid #777}.hero p{color:#333}.chip{border:1px solid #aaa}.step{break-inside:avoid;box-shadow:none}pre{white-space:pre-wrap;word-break:break-word}}
+
+.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;margin:16px 0;font-size:.92rem}th,td{padding:12px;border:1px solid var(--line);vertical-align:top;text-align:left}th{background:var(--sky);color:var(--deep)}.checkpoint{background:#ecf8f0;border-left:4px solid #20824a;padding:14px;margin:18px 0;border-radius:8px}.done{display:block;color:var(--muted);margin-top:18px}.done input{width:18px;height:18px;vertical-align:middle;margin-right:8px}.codehead{display:flex;justify-content:space-between;gap:10px;background:#172b3b;color:white;padding:10px 14px;border-radius:10px 10px 0 0;overflow-wrap:anywhere}.codehead+pre{margin-top:0;border-radius:0 0 12px 12px}pre:before{content:none}button{cursor:pointer;background:var(--blue);color:white;border:0;border-radius:6px;padding:7px 12px;font:inherit;font-size:.82rem}.copy{background:#32617c}details{border:1px solid var(--line);border-radius:9px;margin:12px 0;padding:12px}summary{cursor:pointer;font-weight:bold;color:var(--deep)}details .codehead{margin-top:12px}.diagram svg{width:100%;height:auto}.diagram{overflow:auto}p code,td code{background:var(--sky);padding:2px 4px;border-radius:4px}nav a.active{background:var(--sky);color:var(--blue)}@media print{details{display:block}details>*{display:block!important}.copy,.done,.printbtn{display:none}.step{break-inside:auto}pre{font-size:9pt}tr{break-inside:avoid}}
+</style></head><body>
+<header class="hero" id="top"><div class="inner"><span class="eyebrow">PREPARAÇÃO SAEP · ROTEIRO REVISADO</span><h1>Clínica Veterinária<br>.NET 8 MVC + JWT</h1><p>Arquivos completos, comandos para PowerShell, verificações por etapa e as entregas exigidas pelo PDF. Material de treino para estudar e simular a execução antes da avaliação.</p><div class="chips"><span class="chip">.NET 8</span><span class="chip">SQL Server</span><span class="chip">JWT + BCrypt + AES-GCM</span><span class="chip accent">31 testes de fluxo aprovados</span></div><p><button type="button" class="printbtn">Imprimir roteiro completo</button></p></div></header>
+<div class="layout"><aside><h3>Trilha de execução</h3><nav><a href="#step-1"><span>01</span>Leia a prova e confira as entregas</a><a href="#step-2"><span>02</span>Prepare o ambiente para trabalhar sem internet</a><a href="#step-3"><span>03</span>Crie o projeto e as pastas</a><a href="#step-4"><span>04</span>Instale pacotes e a ferramenta EF Core 8</a><a href="#step-5"><span>05</span>Configure banco, JWT e chave AES</a><a href="#step-6"><span>06</span>Crie as quatro entidades</a><a href="#step-7"><span>07</span>Crie os quatro ViewModels</a><a href="#step-8"><span>08</span>Implemente criptografia e geração do token</a><a href="#step-9"><span>09</span>Crie o DbContext e configure os relacionamentos</a><a href="#step-10"><span>10</span>Prepare a carga inicial e a exportação SQL</a><a href="#step-11"><span>11</span>Crie o controlador da Home</a><a href="#step-12"><span>12</span>Implemente login e logout</a><a href="#step-13"><span>13</span>Implemente tutores e a busca</a><a href="#step-14"><span>14</span>Implemente pets com tutor obrigatório</a><a href="#step-15"><span>15</span>Implemente agendamentos</a><a href="#step-16"><span>16</span>Configure Razor e o menu global</a><a href="#step-17"><span>17</span>Crie as views de login e Home</a><a href="#step-18"><span>18</span>Crie todas as views de tutores</a><a href="#step-19"><span>19</span>Crie todas as views de pets</a><a href="#step-20"><span>20</span>Crie as views de agendamentos</a><a href="#step-21"><span>21</span>Configure Program.cs, compile e crie o banco</a><a href="#step-22"><span>22</span>Execute em HTTPS e faça a primeira conferência</a><a href="#step-23"><span>23</span>Gere e confira saep_db.sql com dados</a><a href="#step-24"><span>24</span>Produza documentação e diagrama ER</a><a href="#step-25"><span>25</span>Teste, organize e compacte a entrega</a><a href="#step-26"><span>26</span>Resolva os erros mais comuns</a><a href="#step-27"><span>27</span>Organize o treino nas três horas</a><a href="#step-28"><span>28</span>Notas de validação para o professor</a></nav></aside><main>
+<div class="introgrid"><div class="info"><strong>Copie por arquivo</strong><span>Cada bloco indica o caminho e tem conteúdo completo.</span></div><div class="info"><strong>Confira por etapa</strong><span>Use as conferências e marque o progresso neste navegador.</span></div><div class="info"><strong>Entregue tudo</strong><span>Documentação, DER, SQL com dados e código em sistema.</span></div></div>
+<section class="step" id="step-1"><div class="stephead"><div class="num">01</div><div><small>ETAPA</small><h2>Leia a prova e confira as entregas</h2></div></div><div class="content"><p>Este é um roteiro de <strong>treino antes da prova</strong>, baseado no PDF fornecido. A prova estabelece 30 minutos de ambientação, 3 horas de execução e proíbe internet. Prepare e teste o ambiente antes; o uso deste material durante a avaliação depende das orientações do avaliador.</p><div class="tablewrap"><table><thead><tr><th>Entrega do PDF</th><th>O que produzir</th></tr></thead><tbody><tr><td>Documentação (Anexo 1)</td><td><code>documentacao.pdf</code>; o PDF recebido não contém o Anexo 1. Solicite o modelo ao professor e adapte o exemplo da etapa 24.</td></tr><tr><td>Diagrama entidade relacionamento</td><td>Imagem ou PDF: <code>diagrama_er.pdf</code>, com atributos, PK, FK e cardinalidades.</td></tr><tr><td>Criação e população do banco</td><td><code>saep_db.sql</code>, com estrutura <strong>e INSERTs</strong>, pelo menos 3 registros em cada tabela de negócio.</td></tr><tr><td>Código fonte</td><td>Pasta <code>sistema</code> com login, Home, tutores, pets e agendamentos.</td></tr><tr><td>Arquivo final</td><td>ZIP/RAR/7zip na Área de Trabalho, nomeado com o nome completo do aluno.</td></tr></tbody></table></div><div class="tip">JWT, BCrypt, AES-GCM, MVC e .NET 8 são escolhas deste laboratório. O enunciado exige autenticação com expiração e proteção dos dados, mas não determina essas tecnologias. Este treino protege o CPF com criptografia reversível e as senhas com hash. Não equivale a uma certificação de conformidade com a LGPD.</div><label class="done"><input type="checkbox" data-step="1" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-2"><div class="stephead"><div class="num">02</div><div><small>ETAPA</small><h2>Prepare o ambiente para trabalhar sem internet</h2></div></div><div class="content"><p>Use Windows, <strong>PowerShell</strong>, SDK .NET 8, SQL Server Express em execução, SSMS e um editor. Estes comandos são de PowerShell; não cole tudo no Prompt de Comando. O roteiro usa <code>localhost\SQLEXPRESS</code>. Confira a instância instalada no SSMS.</p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet --list-sdks
+Get-Service &#x27;MSSQL$SQLEXPRESS&#x27;</code></pre><p>Precisa haver um SDK 8.0.x e o serviço deve estar Running. Se houver SDKs mais novos, selecione no VS/VS Code o projeto net8.0; o projeto abaixo fixa o framework e os pacotes. Instale e restaure os pacotes e a ferramenta EF <strong>durante a preparação, com internet</strong>. Repita uma restauração e compilação sem internet antes da prova.</p><div class="tip">O template MVC usa Bootstrap, jQuery e validação a partir de <code>wwwroot/lib</code>, sem CDN. O SQL Server deve permitir autenticação Windows para sua conta. Ter apenas o runtime do .NET não basta.</div><div class="checkpoint"><strong>Conferência:</strong> SDK 8 instalado, instância conhecida, serviço iniciado e editor funcionando.</div><label class="done"><input type="checkbox" data-step="2" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-3"><div class="stephead"><div class="num">03</div><div><small>ETAPA</small><h2>Crie o projeto e as pastas</h2></div></div><div class="content"><p>Escolha uma pasta de trabalho vazia. Execute o primeiro bloco nessa pasta; depois todos os comandos do projeto serão executados dentro de <code>sistema</code>. O nome lógico do projeto precisa ser <code>ClinicaVeterinaria</code>, pois os namespaces do código usam esse nome.</p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet new mvc -n ClinicaVeterinaria -o sistema --framework net8.0 --no-restore
+Set-Location sistema
+New-Item -ItemType Directory -Force Data, Services, ViewModels, Views/Account, Views/Tutores, Views/Pets, Views/Agendamentos | Out-Null</code></pre><p>O template já cria Controllers, Models, Views, wwwroot, o layout, ErrorViewModel e a página Error. Mantenha os arquivos do template que não forem explicitamente substituídos. Salve todos os arquivos em UTF-8.</p><div class="checkpoint"><strong>Conferência:</strong> O terminal está na pasta sistema e ela contém ClinicaVeterinaria.csproj.</div><label class="done"><input type="checkbox" data-step="3" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-4"><div class="stephead"><div class="num">04</div><div><small>ETAPA</small><h2>Instale pacotes e a ferramenta EF Core 8</h2></div></div><div class="content"><p>Na preparação com internet, execute na pasta sistema. Fixar a versão evita instalar EF/JWT de outra versão principal em net8.0. As versões abaixo foram usadas na execução deste material; são uma referência reproduzível de treino.</p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.23
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.23
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 8.0.23
+dotnet add package BCrypt.Net-Next --version 4.0.3
+dotnet new tool-manifest
+dotnet tool install dotnet-ef --version 8.0.23
+dotnet restore
+dotnet ef --version</code></pre><div class="tip">Se o manifesto local já existir, pule <code>dotnet new tool-manifest</code>. Se ele já declarar o EF, use <code>dotnet tool restore</code>. A ferramenta local evita depender de um dotnet-ef global 9 ou 10. Sem internet, use o cache previamente preparado; <code>--no-restore</code> exige restauração concluída.</div><div class="checkpoint"><strong>Conferência:</strong> dotnet ef --version indica 8.0.23 e os quatro pacotes aparecem no .csproj.</div><label class="done"><input type="checkbox" data-step="4" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-5"><div class="stephead"><div class="num">05</div><div><small>ETAPA</small><h2>Configure banco, JWT e chave AES</h2></div></div><div class="content"><p>Substitua <strong>appsettings.json</strong> pelo conteúdo completo abaixo. A contrabarra da instância deve estar duplicada no JSON. Altere somente servidor/banco conforme seu ambiente.</p><div class="codehead"><strong>appsettings.json</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="appsettings.json">{
+  &quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;Server=localhost\\SQLEXPRESS;Database=ClinicaVetDb;Trusted_Connection=True;TrustServerCertificate=True;&quot;
+  },
+  &quot;Jwt&quot;: {
+    &quot;Issuer&quot;: &quot;ClinicaVeterinaria&quot;,
+    &quot;Audience&quot;: &quot;ClinicaVeterinariaUsuarios&quot;,
+    &quot;ExpireMinutes&quot;: 30
+  },
+  &quot;Logging&quot;: {
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Information&quot;,
+      &quot;Microsoft.AspNetCore&quot;: &quot;Warning&quot;
+    }
+  },
+  &quot;AllowedHosts&quot;: &quot;*&quot;
+}</code></pre><p>Gere duas chaves distintas. O bloco seguinte é compatível com Windows PowerShell 5.1: ele usa uma instância do gerador, pois a chamada estática GetBytes(n) não está disponível no .NET Framework desse shell. <strong>Execute a geração uma vez por banco de treino.</strong></p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet user-secrets init
+$gerador = [Security.Cryptography.RandomNumberGenerator]::Create()
+$bytesJwt = New-Object byte[] 64
+$bytesAes = New-Object byte[] 32
+$gerador.GetBytes($bytesJwt)
+$gerador.GetBytes($bytesAes)
+$chaveJwt = [Convert]::ToBase64String($bytesJwt)
+$chaveAes = [Convert]::ToBase64String($bytesAes)
+$gerador.Dispose()
+dotnet user-secrets set &quot;Jwt:Key&quot; &quot;$chaveJwt&quot;
+dotnet user-secrets set &quot;Encryption:Key&quot; &quot;$chaveAes&quot;</code></pre><p>User Secrets ficam fora do projeto e são carregados em Development. São um recurso local de desenvolvimento, não um cofre de produção. Preserve especialmente <code>Encryption:Key</code>: a carga SQL contém CPFs cifrados com essa chave. Gerar outra chave não recupera esses registros.</p><div class="tip">Ao levar código/SQL a outro computador, configure as mesmas chaves no ambiente do avaliador por um meio acordado com ele. O ZIP do código não transporta User Secrets. Se preferir variáveis de ambiente em um terminal específico, use <code>Jwt__Key</code> e <code>Encryption__Key</code>. Não exponha seus valores em screenshots ou documentação.</div><div class="checkpoint"><strong>Conferência:</strong> As duas configurações foram salvas; Jwt:Key usa 64 bytes aleatórios e Encryption:Key usa 32 bytes em Base64.</div><label class="done"><input type="checkbox" data-step="5" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-6"><div class="stephead"><div class="num">06</div><div><small>ETAPA</small><h2>Crie as quatro entidades</h2></div></div><div class="content"><p>Cada bloco corresponde a um arquivo separado. <code>Id</code> é a chave primária. <code>TutorId</code> e <code>PetId</code> são chaves estrangeiras. Os objetos de navegação servem ao EF para carregar dados relacionados; os formulários usarão ViewModels.</p><p>Crie ou substitua <strong>Models/Usuario.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Models/Usuario.cs — código completo</summary><div class="codehead"><strong>Models/Usuario.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Models/Usuario.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.Models;
+public class Usuario
+{
+    public int Id { get; set; }
+    [Required, StringLength(100)]
+    public string Nome { get; set; } = string.Empty;
+    [Required, EmailAddress, StringLength(150)]
+    public string Email { get; set; } = string.Empty;
+    [Required]
+    public string SenhaHash { get; set; } = string.Empty;
+    [Required, StringLength(30)]
+    public string Perfil { get; set; } = &quot;Usuario&quot;;
+}</code></pre></details><p>Crie ou substitua <strong>Models/Tutor.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Models/Tutor.cs — código completo</summary><div class="codehead"><strong>Models/Tutor.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Models/Tutor.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.Models;
+public class Tutor
+{
+    public int Id { get; set; }
+    [Required, StringLength(120)]
+    public string Nome { get; set; } = string.Empty;
+    [Required]
+    public string CpfCriptografado { get; set; } = string.Empty;
+    [Required, StringLength(20)]
+    public string Telefone { get; set; } = string.Empty;
+    [Required, EmailAddress, StringLength(150)]
+    public string Email { get; set; } = string.Empty;
+    public ICollection&lt;Pet&gt; Pets { get; set; } = new List&lt;Pet&gt;();
+    public ICollection&lt;Agendamento&gt; Agendamentos { get; set; } = new List&lt;Agendamento&gt;();
+}</code></pre></details><p>Crie ou substitua <strong>Models/Pet.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Models/Pet.cs — código completo</summary><div class="codehead"><strong>Models/Pet.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Models/Pet.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.Models;
+public class Pet
+{
+    public int Id { get; set; }
+    [Required, StringLength(80)]
+    public string Nome { get; set; } = string.Empty;
+    [Required, StringLength(50)]
+    public string Especie { get; set; } = string.Empty;
+    [StringLength(80)]
+    public string? Raca { get; set; }
+    [DataType(DataType.Date)]
+    public DateTime? DataNascimento { get; set; }
+    [Required]
+    public int TutorId { get; set; }
+    public Tutor Tutor { get; set; } = null!;
+    public ICollection&lt;Agendamento&gt; Agendamentos { get; set; } = new List&lt;Agendamento&gt;();
+}</code></pre></details><p>Crie ou substitua <strong>Models/Agendamento.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Models/Agendamento.cs — código completo</summary><div class="codehead"><strong>Models/Agendamento.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Models/Agendamento.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.Models;
+public class Agendamento
+{
+    public int Id { get; set; }
+    [Required]
+    public DateTime DataHora { get; set; }
+    [Required, StringLength(200)]
+    public string Motivo { get; set; } = string.Empty;
+    [Required, StringLength(30)]
+    public string Status { get; set; } = &quot;Agendado&quot;;
+    [Required]
+    public int TutorId { get; set; }
+    public Tutor Tutor { get; set; } = null!;
+    [Required]
+    public int PetId { get; set; }
+    public Pet Pet { get; set; } = null!;
+}</code></pre></details><div class="checkpoint"><strong>Conferência:</strong> Os quatro arquivos têm namespace ClinicaVeterinaria.Models. CPF não é armazenado em uma propriedade de texto puro.</div><label class="done"><input type="checkbox" data-step="6" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-7"><div class="stephead"><div class="num">07</div><div><small>ETAPA</small><h2>Crie os quatro ViewModels</h2></div></div><div class="content"><p>ViewModels contêm os campos recebidos pelo formulário. Isso evita validar o objeto Tutor como se ele tivesse sido enviado no cadastro de pet, e limita quais propriedades podem ser alteradas pelo usuário. O CPF deve ser digitado com 11 dígitos sem pontuação; a validação aqui confere o formato, não os dígitos verificadores.</p><p>Crie ou substitua <strong>ViewModels/LoginViewModel.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>ViewModels/LoginViewModel.cs — código completo</summary><div class="codehead"><strong>ViewModels/LoginViewModel.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="ViewModels/LoginViewModel.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.ViewModels;
+public class LoginViewModel
+{
+    [Required, EmailAddress]
+    public string Email { get; set; } = string.Empty;
+    [Required, DataType(DataType.Password)]
+    public string Senha { get; set; } = string.Empty;
+}</code></pre></details><p>Crie ou substitua <strong>ViewModels/TutorFormViewModel.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>ViewModels/TutorFormViewModel.cs — código completo</summary><div class="codehead"><strong>ViewModels/TutorFormViewModel.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="ViewModels/TutorFormViewModel.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.ViewModels;
+public class TutorFormViewModel
+{
+    public int Id { get; set; }
+    [Required, StringLength(120)]
+    public string Nome { get; set; } = string.Empty;
+    [Required, Display(Name = &quot;CPF&quot;), RegularExpression(@&quot;\d{11}&quot;, ErrorMessage = &quot;Informe 11 dígitos, sem pontuação.&quot;)]
+    public string Cpf { get; set; } = string.Empty;
+    [Required, StringLength(20)]
+    public string Telefone { get; set; } = string.Empty;
+    [Required, EmailAddress, StringLength(150)]
+    public string Email { get; set; } = string.Empty;
+}</code></pre></details><p>Crie ou substitua <strong>ViewModels/PetFormViewModel.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>ViewModels/PetFormViewModel.cs — código completo</summary><div class="codehead"><strong>ViewModels/PetFormViewModel.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="ViewModels/PetFormViewModel.cs">using System.ComponentModel.DataAnnotations;
+namespace ClinicaVeterinaria.ViewModels;
+public class PetFormViewModel
+{
+    public int Id { get; set; }
+    [Required, StringLength(80)]
+    public string Nome { get; set; } = string.Empty;
+    [Required, StringLength(50)]
+    public string Especie { get; set; } = string.Empty;
+    [StringLength(80)]
+    public string? Raca { get; set; }
+    [DataType(DataType.Date)]
+    public DateTime? DataNascimento { get; set; }
+    [Range(1, int.MaxValue, ErrorMessage = &quot;Selecione um tutor.&quot;), Display(Name = &quot;Tutor&quot;)]
+    public int TutorId { get; set; }
+}</code></pre></details><p>Crie ou substitua <strong>ViewModels/AgendamentoFormViewModel.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>ViewModels/AgendamentoFormViewModel.cs — código completo</summary><div class="codehead"><strong>ViewModels/AgendamentoFormViewModel.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="ViewModels/AgendamentoFormViewModel.cs">using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
+namespace ClinicaVeterinaria.ViewModels;
+public class AgendamentoFormViewModel
+{
+    public int Id { get; set; }
+    [Required, Display(Name = &quot;Data e hora&quot;)]
+    public DateTime DataHora { get; set; }
+    [Required, StringLength(200)]
+    public string Motivo { get; set; } = string.Empty;
+    [Required, StringLength(30)]
+    public string Status { get; set; } = &quot;Agendado&quot;;
+    [Range(1, int.MaxValue, ErrorMessage = &quot;Selecione um tutor.&quot;), Display(Name = &quot;Tutor&quot;)]
+    public int TutorId { get; set; }
+    [Range(1, int.MaxValue, ErrorMessage = &quot;Selecione um pet.&quot;), Display(Name = &quot;Pet&quot;)]
+    public int PetId { get; set; }
+    public IEnumerable&lt;SelectListItem&gt; Tutores { get; set; } = [];
+    public IEnumerable&lt;SelectListItem&gt; Pets { get; set; } = [];
+}</code></pre></details><div class="checkpoint"><strong>Conferência:</strong> PetFormViewModel tem TutorId, mas não tem uma propriedade Tutor; seleções exigem Id positivo.</div><label class="done"><input type="checkbox" data-step="7" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-8"><div class="stephead"><div class="num">08</div><div><small>ETAPA</small><h2>Implemente criptografia e geração do token</h2></div></div><div class="content"><p>AES-GCM cifra o CPF com nonce aleatório e tag de autenticação. O banco recebe Base64 do pacote. BCrypt protege senhas por hash; não se descriptografa uma senha. O JWT contém identificação do usuário e expira após 30 minutos. Neste código, Jwt:Key é usada como texto UTF-8 tanto para assinar quanto para validar; Encryption:Key é decodificada de Base64.</p><p>Crie ou substitua <strong>Services/CriptografiaService.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Services/CriptografiaService.cs — código completo</summary><div class="codehead"><strong>Services/CriptografiaService.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Services/CriptografiaService.cs">using System.Security.Cryptography;
+using System.Text;
+namespace ClinicaVeterinaria.Services;
+public class CriptografiaService
+{
+    private readonly byte[] _key;
+    public CriptografiaService(IConfiguration configuration)
+    {
+        var keyBase64 = configuration[&quot;Encryption:Key&quot;]
+            ?? throw new InvalidOperationException(&quot;Encryption:Key não configurada.&quot;);
+        _key = Convert.FromBase64String(keyBase64);
+        if (_key.Length != 32)
+            throw new InvalidOperationException(&quot;Encryption:Key deve ter 32 bytes.&quot;);
+    }
+    public string Criptografar(string texto)
+    {
+        byte[] nonce = RandomNumberGenerator.GetBytes(12);
+        byte[] textoBytes = Encoding.UTF8.GetBytes(texto);
+        byte[] cifra = new byte[textoBytes.Length];
+        byte[] tag = new byte[16];
+        using var aes = new AesGcm(_key, 16);
+        aes.Encrypt(nonce, textoBytes, cifra, tag);
+        byte[] pacote = new byte[nonce.Length + tag.Length + cifra.Length];
+        Buffer.BlockCopy(nonce, 0, pacote, 0, nonce.Length);
+        Buffer.BlockCopy(tag, 0, pacote, nonce.Length, tag.Length);
+        Buffer.BlockCopy(cifra, 0, pacote, nonce.Length + tag.Length, cifra.Length);
+        return Convert.ToBase64String(pacote);
+    }
+    public string Descriptografar(string valor)
+    {
+        byte[] pacote = Convert.FromBase64String(valor);
+        byte[] nonce = pacote[..12];
+        byte[] tag = pacote[12..28];
+        byte[] cifra = pacote[28..];
+        byte[] texto = new byte[cifra.Length];
+        using var aes = new AesGcm(_key, 16);
+        aes.Decrypt(nonce, cifra, tag, texto);
+        return Encoding.UTF8.GetString(texto);
+    }
+}</code></pre></details><p>Crie ou substitua <strong>Services/TokenService.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Services/TokenService.cs — código completo</summary><div class="codehead"><strong>Services/TokenService.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Services/TokenService.cs">using ClinicaVeterinaria.Models;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+namespace ClinicaVeterinaria.Services;
+public class TokenService
+{
+    private readonly IConfiguration _configuration;
+    public TokenService(IConfiguration configuration) =&gt; _configuration = configuration;
+    public string GerarToken(Usuario usuario)
+    {
+        var claims = new List&lt;Claim&gt;
+          {
+new(ClaimTypes.NameIdentifier, usuario.Id.ToString()), new(ClaimTypes.Name, usuario.Nome), new(ClaimTypes.Email, usuario.Email), new(ClaimTypes.Role, usuario.Perfil)
+          };
+        var keyText = _configuration[&quot;Jwt:Key&quot;]
+            ?? throw new InvalidOperationException(&quot;Jwt:Key não configurada.&quot;);
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyText));
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        var minutes = _configuration.GetValue&lt;int&gt;(&quot;Jwt:ExpireMinutes&quot;, 30);
+        var token = new JwtSecurityToken(
+issuer: _configuration[&quot;Jwt:Issuer&quot;], audience: _configuration[&quot;Jwt:Audience&quot;], claims: claims, notBefore: DateTime.UtcNow, expires: DateTime.UtcNow.AddMinutes(minutes),
+              signingCredentials: credentials);
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}</code></pre></details><div class="tip">Um mesmo CPF pode gerar cifras diferentes. Por isso a busca deste treino usa nome, e-mail ou telefone; não compara o CPF cifrado. A listagem de agendamentos recupera o CPF somente depois da autenticação.</div><div class="checkpoint"><strong>Conferência:</strong> Há dois serviços distintos, com a chave de cada um obtida por configuração.</div><label class="done"><input type="checkbox" data-step="8" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-9"><div class="stephead"><div class="num">09</div><div><small>ETAPA</small><h2>Crie o DbContext e configure os relacionamentos</h2></div></div><div class="content"><p>O contexto expõe as quatro tabelas. E-mail de usuário é único. A exclusão de tutor/pet com dependências é restrita; as telas apresentarão a mensagem de negócio antes da remoção.</p><p>Crie ou substitua <strong>Data/AppDbContext.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Data/AppDbContext.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Data/AppDbContext.cs">using ClinicaVeterinaria.Models;
+using Microsoft.EntityFrameworkCore;
+namespace ClinicaVeterinaria.Data;
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions&lt;AppDbContext&gt; options) : base(options) { }
+    public DbSet&lt;Usuario&gt; Usuarios =&gt; Set&lt;Usuario&gt;();
+    public DbSet&lt;Tutor&gt; Tutores =&gt; Set&lt;Tutor&gt;();
+    public DbSet&lt;Pet&gt; Pets =&gt; Set&lt;Pet&gt;();
+    public DbSet&lt;Agendamento&gt; Agendamentos =&gt; Set&lt;Agendamento&gt;();
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity&lt;Usuario&gt;()
+            .HasIndex(u =&gt; u.Email)
+            .IsUnique();
+        modelBuilder.Entity&lt;Pet&gt;()
+            .HasOne(p =&gt; p.Tutor)
+            .WithMany(t =&gt; t.Pets)
+            .HasForeignKey(p =&gt; p.TutorId)
+            .OnDelete(DeleteBehavior.Restrict);
+        modelBuilder.Entity&lt;Agendamento&gt;()
+            .HasOne(a =&gt; a.Tutor)
+            .WithMany(t =&gt; t.Agendamentos)
+            .HasForeignKey(a =&gt; a.TutorId)
+            .OnDelete(DeleteBehavior.Restrict);
+        modelBuilder.Entity&lt;Agendamento&gt;()
+            .HasOne(a =&gt; a.Pet)
+            .WithMany(p =&gt; p.Agendamentos)
+            .HasForeignKey(a =&gt; a.PetId)
+            .OnDelete(DeleteBehavior.Restrict);
+    }
+}</code></pre><div class="checkpoint"><strong>Conferência:</strong> Tutor → Pet é 1:N; Tutor → Agendamento é 1:N; Pet → Agendamento é 1:N.</div><label class="done"><input type="checkbox" data-step="9" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-10"><div class="stephead"><div class="num">10</div><div><small>ETAPA</small><h2>Prepare a carga inicial e a exportação SQL</h2></div></div><div class="content"><p>Crie os dois arquivos antes de compilar Program.cs. <code>DbInitializer</code> aplica as migrations e insere três exemplos em cada tabela inicialmente vazia. <code>SqlEntrega</code> gera o arquivo da prova com schema, FKs e INSERTs; o seed em C# sozinho não atende à exigência do script SQL.</p><p>Crie ou substitua <strong>Data/DbInitializer.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Data/DbInitializer.cs — código completo</summary><div class="codehead"><strong>Data/DbInitializer.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Data/DbInitializer.cs">using ClinicaVeterinaria.Models;
+using ClinicaVeterinaria.Services;
+using Microsoft.EntityFrameworkCore;
+namespace ClinicaVeterinaria.Data;
+public static class DbInitializer
+{
+    public static async Task SeedAsync(IServiceProvider services)
+    {
+        using var scope = services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService&lt;AppDbContext&gt;();
+        var crypto = scope.ServiceProvider.GetRequiredService&lt;CriptografiaService&gt;();
+        await db.Database.MigrateAsync();
+        if (!await db.Usuarios.AnyAsync())
+        {
+            db.Usuarios.AddRange(new Usuario { Nome = &quot;Administrador&quot;, Email = &quot;admin@clinica.com&quot;, SenhaHash = BCrypt.Net.BCrypt.HashPassword(&quot;Admin@123&quot;), Perfil = &quot;Administrador&quot; }, new Usuario { Nome = &quot;Ana Recepção&quot;, Email = &quot;ana@clinica.com&quot;, SenhaHash = BCrypt.Net.BCrypt.HashPassword(&quot;Ana@123&quot;), Perfil = &quot;Usuario&quot; }, new Usuario { Nome = &quot;Carlos Recepção&quot;, Email = &quot;carlos@clinica.com&quot;, SenhaHash = BCrypt.Net.BCrypt.HashPassword(&quot;Carlos@123&quot;), Perfil = &quot;Usuario&quot; }
+                         );
+            await db.SaveChangesAsync();
+        }
+        if (!await db.Tutores.AnyAsync())
+        {
+            db.Tutores.AddRange(new Tutor { Nome = &quot;João Silva&quot;, CpfCriptografado = crypto.Criptografar(&quot;11111111111&quot;), Telefone = &quot;54999990001&quot;, Email = &quot;joao@email.com&quot; }, new Tutor { Nome = &quot;Maria Souza&quot;, CpfCriptografado = crypto.Criptografar(&quot;22222222222&quot;), Telefone = &quot;54999990002&quot;, Email = &quot;maria@email.com&quot; }, new Tutor { Nome = &quot;Pedro Lima&quot;, CpfCriptografado = crypto.Criptografar(&quot;33333333333&quot;), Telefone = &quot;54999990003&quot;, Email = &quot;pedro@email.com&quot; }
+                         );
+            await db.SaveChangesAsync();
+        }
+        if (!await db.Pets.AnyAsync())
+        {
+            var tutores = await db.Tutores.OrderBy(t =&gt; t.Id).Take(3).ToListAsync();
+            db.Pets.AddRange(new Pet { Nome = &quot;Rex&quot;, Especie = &quot;Cachorro&quot;, Raca = &quot;Labrador&quot;, TutorId = tutores[0].Id }, new Pet { Nome = &quot;Mia&quot;, Especie = &quot;Gato&quot;, Raca = &quot;Siamês&quot;, TutorId = tutores[1].Id }, new Pet { Nome = &quot;Thor&quot;, Especie = &quot;Cachorro&quot;, Raca = &quot;SRD&quot;, TutorId = tutores[2].Id }
+                          );
+            await db.SaveChangesAsync();
+        }
+        if (!await db.Agendamentos.AnyAsync())
+        {
+            var pets = await db.Pets.Include(p =&gt; p.Tutor).OrderBy(p =&gt; p.Id).Take(3).ToListAsync();
+            db.Agendamentos.AddRange(new Agendamento { DataHora = DateTime.Today.AddDays(1).AddHours(9), Motivo = &quot;Vacinação&quot;, Status = &quot;Agendado&quot;, TutorId = pets[0].TutorId, PetId = pets[0].Id }, new Agendamento
+            {
+                DataHora = DateTime.Today.AddDays(2).AddHours(14),
+                Motivo = &quot;Consulta&quot;,
+                Status = &quot;Agendado&quot;,
+                TutorId = pets[1].TutorId,
+                PetId = pets[1].Id
+            }, new Agendamento { DataHora = DateTime.Today.AddDays(3).AddHours(10), Motivo = &quot;Retorno&quot;, Status = &quot;Agendado&quot;, TutorId = pets[2].TutorId, PetId = pets[2].Id }
+                         );
+            await db.SaveChangesAsync();
+        }
+    }
+}</code></pre></details><p>Crie ou substitua <strong>Data/SqlEntrega.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Data/SqlEntrega.cs — código completo</summary><div class="codehead"><strong>Data/SqlEntrega.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Data/SqlEntrega.cs">using System.Globalization;
+using System.Text;
+using System.Text.RegularExpressions;
+using ClinicaVeterinaria.Services;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace ClinicaVeterinaria.Data;
+
+public static class SqlEntrega
+{
+    public static async Task ExportarAsync(IServiceProvider services, string arquivo, string banco)
+    {
+        if (!Regex.IsMatch(banco, @&quot;^[A-Za-z][A-Za-z0-9_]*$&quot;))
+            throw new ArgumentException(&quot;Nome de banco inválido.&quot;);
+        using var scope = services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService&lt;AppDbContext&gt;();
+        var usuarios = await db.Usuarios.AsNoTracking().OrderBy(x =&gt; x.Id).ToListAsync();
+        var tutores = await db.Tutores.AsNoTracking().OrderBy(x =&gt; x.Id).ToListAsync();
+        var pets = await db.Pets.AsNoTracking().OrderBy(x =&gt; x.Id).ToListAsync();
+        var agendas = await db.Agendamentos.AsNoTracking().OrderBy(x =&gt; x.Id).ToListAsync();
+        if (new[] { usuarios.Count, tutores.Count, pets.Count, agendas.Count }.Any(n =&gt; n &lt; 3))
+            throw new InvalidOperationException(&quot;Cadastre pelo menos três registros em cada tabela de negócio antes de exportar.&quot;);
+        var sql = new StringBuilder($&quot;-- SAEP: criação e população. Preserve a chave AES usada nesta carga.\nUSE [master];\nGO\nIF DB_ID(N&#x27;{banco}&#x27;) IS NULL CREATE DATABASE [{banco}];\nGO\nUSE [{banco}];\nGO\n&quot;);
+        sql.Append(db.GetService&lt;IMigrator&gt;().GenerateScript(options: MigrationsSqlGenerationOptions.Idempotent));
+        sql.AppendLine(&quot;\nSET XACT_ABORT ON;\nBEGIN TRANSACTION;&quot;);
+        void Tabela(string nome, string colunas, IEnumerable&lt;string&gt; valores)
+        {
+            sql.AppendLine($&quot;SET IDENTITY_INSERT [{nome}] ON;&quot;);
+            foreach (var linha in valores)
+            {
+                var id = linha.Split(&#x27;,&#x27;)[0];
+                sql.AppendLine($&quot;IF NOT EXISTS (SELECT 1 FROM [{nome}] WHERE [Id] = {id}) INSERT INTO [{nome}] ({colunas}) VALUES ({linha});&quot;);
+            }
+            sql.AppendLine($&quot;SET IDENTITY_INSERT [{nome}] OFF;&quot;);
+        }
+        Tabela(&quot;Usuarios&quot;, &quot;[Id],[Nome],[Email],[SenhaHash],[Perfil]&quot;,
+            usuarios.Select(x =&gt; $&quot;{x.Id},{S(x.Nome)},{S(x.Email)},{S(x.SenhaHash)},{S(x.Perfil)}&quot;));
+        Tabela(&quot;Tutores&quot;, &quot;[Id],[Nome],[CpfCriptografado],[Telefone],[Email]&quot;,
+            tutores.Select(x =&gt; $&quot;{x.Id},{S(x.Nome)},{S(x.CpfCriptografado)},{S(x.Telefone)},{S(x.Email)}&quot;));
+        Tabela(&quot;Pets&quot;, &quot;[Id],[Nome],[Especie],[Raca],[DataNascimento],[TutorId]&quot;,
+            pets.Select(x =&gt; $&quot;{x.Id},{S(x.Nome)},{S(x.Especie)},{S(x.Raca)},{D(x.DataNascimento)},{x.TutorId}&quot;));
+        Tabela(&quot;Agendamentos&quot;, &quot;[Id],[DataHora],[Motivo],[Status],[TutorId],[PetId]&quot;,
+            agendas.Select(x =&gt; $&quot;{x.Id},{D(x.DataHora)},{S(x.Motivo)},{S(x.Status)},{x.TutorId},{x.PetId}&quot;));
+        sql.AppendLine(&quot;COMMIT;\nGO&quot;);
+        sql.AppendLine(&quot;SELECT &#x27;Usuarios&#x27; AS Tabela, COUNT(*) AS Quantidade FROM Usuarios UNION ALL SELECT &#x27;Tutores&#x27;, COUNT(*) FROM Tutores UNION ALL SELECT &#x27;Pets&#x27;, COUNT(*) FROM Pets UNION ALL SELECT &#x27;Agendamentos&#x27;, COUNT(*) FROM Agendamentos;\nGO&quot;);
+        await File.WriteAllTextAsync(arquivo, sql.ToString(), Encoding.UTF8);
+        Console.WriteLine($&quot;SQL completo salvo em: {Path.GetFullPath(arquivo)}&quot;);
+    }
+    private static string S(string? valor) =&gt; valor is null ? &quot;NULL&quot; : &quot;N&#x27;&quot; + valor.Replace(&quot;&#x27;&quot;, &quot;&#x27;&#x27;&quot;) + &quot;&#x27;&quot;;
+    private static string D(DateTime? valor) =&gt; valor.HasValue ? &quot;&#x27;&quot; + valor.Value.ToString(&quot;yyyy-MM-ddTHH:mm:ss.fffffff&quot;, CultureInfo.InvariantCulture) + &quot;&#x27;&quot; : &quot;NULL&quot;;
+
+    // Apoio à validação do material pelo professor; não é uma tela do sistema.
+    public static async Task ImportarAsync(IServiceProvider services, string arquivo)
+    {
+        using var scope = services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService&lt;AppDbContext&gt;();
+        var cs = new SqlConnectionStringBuilder(db.Database.GetConnectionString()) { InitialCatalog = &quot;master&quot; };
+        using var connection = new SqlConnection(cs.ConnectionString);
+        await connection.OpenAsync();
+        foreach (var batch in Regex.Split(await File.ReadAllTextAsync(arquivo), @&quot;^\s*GO\s*$&quot;, RegexOptions.Multiline | RegexOptions.IgnoreCase))
+        {
+            if (string.IsNullOrWhiteSpace(batch)) continue;
+            using var command = new SqlCommand(batch, connection) { CommandTimeout = 60 };
+            await command.ExecuteNonQueryAsync();
+        }
+        Console.WriteLine(&quot;SQL executado sem inicializador automático.&quot;);
+    }
+
+    public static async Task VerificarAsync(IServiceProvider services)
+    {
+        using var scope = services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService&lt;AppDbContext&gt;();
+        var crypto = scope.ServiceProvider.GetRequiredService&lt;CriptografiaService&gt;();
+        var counts = new[] { await db.Usuarios.CountAsync(), await db.Tutores.CountAsync(), await db.Pets.CountAsync(), await db.Agendamentos.CountAsync() };
+        if (counts.Any(n =&gt; n &lt; 3)) throw new Exception(&quot;Carga incompleta.&quot;);
+        foreach (var t in await db.Tutores.AsNoTracking().ToListAsync())
+        {
+            var cpf = crypto.Descriptografar(t.CpfCriptografado);
+            if (!Regex.IsMatch(cpf, @&quot;^\d{11}$&quot;) || t.CpfCriptografado.Contains(cpf)) throw new Exception(&quot;CPF não protegido.&quot;);
+        }
+        var admin = await db.Usuarios.SingleAsync(u =&gt; u.Email == &quot;admin@clinica.com&quot;);
+        if (!BCrypt.Net.BCrypt.Verify(&quot;Admin@123&quot;, admin.SenhaHash)) throw new Exception(&quot;Hash do administrador inválido.&quot;);
+        if (await db.Agendamentos.Include(a =&gt; a.Pet).AnyAsync(a =&gt; a.TutorId != a.Pet.TutorId)) throw new Exception(&quot;Relação inconsistente.&quot;);
+        Console.WriteLine($&quot;PASSOU: Usuarios={counts[0]}, Tutores={counts[1]}, Pets={counts[2]}, Agendamentos={counts[3]}; CPF AES-GCM, senha BCrypt e relações conferidas.&quot;);
+    }
+}</code></pre></details><p>Credenciais fictícias para treino: <code>admin@clinica.com / Admin@123</code>, <code>ana@clinica.com / Ana@123</code> e <code>carlos@clinica.com / Carlos@123</code>. Os três CPFs de exemplo são dados fictícios para demonstrar a criptografia.</p><div class="tip">A carga é destinada a um banco novo de treino. AnyAsync evita repetir a carga de uma tabela que já possui registros; não repõe automaticamente registros apagados nem repara bancos parcialmente preenchidos. Para exportar, cada tabela de negócio precisa ter pelo menos três registros. Não altere o esquema depois de criar a migration sem gerar outra.</div><div class="checkpoint"><strong>Conferência:</strong> Não existem hashes ou CPFs cifrados aleatórios em OnModelCreating; a carga acontece no inicializador.</div><label class="done"><input type="checkbox" data-step="10" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-11"><div class="stephead"><div class="num">11</div><div><small>ETAPA</small><h2>Crie o controlador da Home</h2></div></div><div class="content"><p>Substitua o arquivo inteiro. A Home exige login; Error permanece anônima para permitir a página de erro em Production. Mantenha <code>Models/ErrorViewModel.cs</code> e <code>Views/Home/Error.cshtml</code> do template.</p><p>Crie ou substitua <strong>Controllers/HomeController.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Controllers/HomeController.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Controllers/HomeController.cs">using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+namespace ClinicaVeterinaria.Controllers;
+[Authorize]
+public class HomeController : Controller
+{
+    public IActionResult Index() =&gt; View();
+    [AllowAnonymous]
+    public IActionResult Error() =&gt; View(new ClinicaVeterinaria.Models.ErrorViewModel
+    {
+        RequestId = System.Diagnostics.Activity.Current?.Id ?? HttpContext.TraceIdentifier
+    });
+}</code></pre><div class="checkpoint"><strong>Conferência:</strong> A classe possui [Authorize] e a action Error possui [AllowAnonymous].</div><label class="done"><input type="checkbox" data-step="11" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-12"><div class="stephead"><div class="num">12</div><div><small>ETAPA</small><h2>Implemente login e logout</h2></div></div><div class="content"><p>E-mail ou senha inválidos geram uma mensagem genérica. O JWT vai para cookie HttpOnly, Secure e SameSite Strict, com expiração. Logout é POST com antiforgery. O token é validado pelo servidor em cada requisição protegida.</p><p>Crie ou substitua <strong>Controllers/AccountController.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Controllers/AccountController.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Controllers/AccountController.cs">using ClinicaVeterinaria.Data;
+using ClinicaVeterinaria.Services;
+using ClinicaVeterinaria.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+namespace ClinicaVeterinaria.Controllers;
+public class AccountController : Controller
+{
+    private readonly AppDbContext _context;
+    private readonly TokenService _tokenService;
+    private readonly IConfiguration _configuration;
+    public AccountController(AppDbContext context, TokenService tokenService, IConfiguration configuration)
+    {
+        _context = context;
+        _tokenService = tokenService;
+        _configuration = configuration;
+    }
+    [AllowAnonymous]
+    [HttpGet]
+    public IActionResult Login() =&gt; View();
+    [AllowAnonymous]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Login(LoginViewModel model)
+    {
+        if (!ModelState.IsValid) return View(model);
+        var usuario = await _context.Usuarios
+.AsNoTracking()
+            .FirstOrDefaultAsync(u =&gt; u.Email == model.Email);
+        if (usuario is null || !BCrypt.Net.BCrypt.Verify(model.Senha, usuario.SenhaHash))
+        {
+            ModelState.AddModelError(string.Empty, &quot;E-mail ou senha inválidos.&quot;);
+            return View(model);
+        }
+        var token = _tokenService.GerarToken(usuario);
+        var minutes = _configuration.GetValue&lt;int&gt;(&quot;Jwt:ExpireMinutes&quot;, 30);
+        Response.Cookies.Append(&quot;jwt&quot;, token, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = true,
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTimeOffset.UtcNow.AddMinutes(minutes),
+            IsEssential = true
+        });
+        return RedirectToAction(&quot;Index&quot;, &quot;Home&quot;);
+    }
+    [Authorize]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Logout()
+    {
+        Response.Cookies.Delete(&quot;jwt&quot;);
+        return RedirectToAction(nameof(Login));
+    }
+}</code></pre><div class="tip">Secure=true exige HTTPS. Apagar o cookie encerra a sessão neste navegador; o JWT é stateless e não possui lista de revogação neste treino. Não confunda logout com revogação global de tokens.</div><div class="checkpoint"><strong>Conferência:</strong> Login tem [AllowAnonymous]; ambos os POSTs validam antiforgery.</div><label class="done"><input type="checkbox" data-step="12" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-13"><div class="stephead"><div class="num">13</div><div><small>ETAPA</small><h2>Implemente tutores e a busca</h2></div></div><div class="content"><p>A busca recebe o termo por GET e atualiza a listagem por nome, e-mail ou telefone. Cadastro cifra o CPF; edição recupera e cifra novamente; exclusão bloqueia dependências.</p><p>Crie ou substitua <strong>Controllers/TutoresController.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Controllers/TutoresController.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Controllers/TutoresController.cs">using ClinicaVeterinaria.Data;
+using ClinicaVeterinaria.Models;
+using ClinicaVeterinaria.Services;
+using ClinicaVeterinaria.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+namespace ClinicaVeterinaria.Controllers;
+[Authorize]
+public class TutoresController : Controller
+{
+    private readonly AppDbContext _context;
+    private readonly CriptografiaService _crypto;
+    public TutoresController(AppDbContext context, CriptografiaService crypto)
+    { _context = context; _crypto = crypto; }
+    public async Task&lt;IActionResult&gt; Index(string? busca)
+    {
+        var query = _context.Tutores.AsNoTracking().AsQueryable();
+        if (!string.IsNullOrWhiteSpace(busca))
+            query = query.Where(t =&gt; t.Nome.Contains(busca) || t.Email.Contains(busca) || t.Telefone.Contains(
+busca));
+        ViewBag.Busca = busca;
+        return View(await query.OrderBy(t =&gt; t.Nome).ToListAsync());
+    }
+    [HttpGet]
+    public IActionResult Create() =&gt; View(new TutorFormViewModel());
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Create(TutorFormViewModel vm)
+    {
+        if (!ModelState.IsValid) return View(vm);
+        var tutor = new Tutor
+        {
+            Nome = vm.Nome,
+            CpfCriptografado = _crypto.Criptografar(vm.Cpf),
+            Telefone = vm.Telefone,
+            Email = vm.Email
+        };
+        _context.Add(tutor); await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Edit(int id)
+    {
+        var t = await _context.Tutores.FindAsync(id);
+        if (t is null) return NotFound();
+        return View(new TutorFormViewModel
+        {
+            Id = t.Id,
+            Nome = t.Nome,
+            Cpf = _crypto.Descriptografar(t.CpfCriptografado),
+            Telefone = t.Telefone,
+            Email = t.Email
+        });
+    }
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Edit(int id, TutorFormViewModel vm)
+    {
+        if (id != vm.Id) return BadRequest();
+        if (!ModelState.IsValid) return View(vm);
+        var t = await _context.Tutores.FindAsync(id);
+        if (t is null) return NotFound();
+        t.Nome = vm.Nome; t.CpfCriptografado = _crypto.Criptografar(vm.Cpf); t.Telefone = vm.Telefone; t.Email = vm.Email;
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Delete(int id)
+    {
+        var t = await _context.Tutores.AsNoTracking().FirstOrDefaultAsync(x =&gt; x.Id == id);
+        return t is null ? NotFound() : View(t);
+    }
+    [HttpPost, ActionName(&quot;Delete&quot;), ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; DeleteConfirmed(int id)
+    {
+        var t = await _context.Tutores.FindAsync(id);
+        if (t is null) return NotFound();
+        bool possuiPets = await _context.Pets.AnyAsync(p =&gt; p.TutorId == id);
+        bool possuiAgenda = await _context.Agendamentos.AnyAsync(a =&gt; a.TutorId == id);
+        if (possuiPets || possuiAgenda)
+        {
+            TempData[&quot;Erro&quot;] = &quot;Tutor não pode ser excluído porque possui pets ou agendamentos.&quot;;
+            return RedirectToAction(nameof(Index));
+        }
+        _context.Remove(t); await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+}</code></pre><div class="checkpoint"><strong>Conferência:</strong> O controlador usa TutorFormViewModel nos POSTs e [Authorize] na classe.</div><label class="done"><input type="checkbox" data-step="13" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-14"><div class="stephead"><div class="num">14</div><div><small>ETAPA</small><h2>Implemente pets com tutor obrigatório</h2></div></div><div class="content"><p>O servidor confere se o tutor existe. O ViewModel elimina o bloqueio de validação encontrado no HTML original. Alterar o tutor de um pet com agendamentos é bloqueado para manter as associações consistentes; exclua ou reorganize os agendamentos antes de transferir o pet.</p><p>Crie ou substitua <strong>Controllers/PetsController.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Controllers/PetsController.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Controllers/PetsController.cs">using ClinicaVeterinaria.Data;
+using ClinicaVeterinaria.Models;
+using ClinicaVeterinaria.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+
+namespace ClinicaVeterinaria.Controllers;
+[Authorize]
+public class PetsController : Controller
+{
+    private readonly AppDbContext _context;
+    public PetsController(AppDbContext context) =&gt; _context = context;
+    public async Task&lt;IActionResult&gt; Index() =&gt; View(await _context.Pets.AsNoTracking()
+        .Include(p =&gt; p.Tutor).OrderBy(p =&gt; p.Nome).ToListAsync());
+
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Create()
+    {
+        await CarregarTutores(); return View(new PetFormViewModel());
+    }
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Create(PetFormViewModel vm)
+    {
+        await Validar(vm);
+        if (!ModelState.IsValid) { await CarregarTutores(vm.TutorId); return View(vm); }
+        var pet = new Pet();
+        Preencher(pet, vm);
+        _context.Pets.Add(pet); await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Edit(int id)
+    {
+        var pet = await _context.Pets.FindAsync(id);
+        if (pet is null) return NotFound();
+        await CarregarTutores(pet.TutorId);
+        return View(new PetFormViewModel
+        {
+            Id = pet.Id,
+            Nome = pet.Nome,
+            Especie = pet.Especie,
+            Raca = pet.Raca,
+            DataNascimento = pet.DataNascimento,
+            TutorId = pet.TutorId
+        });
+    }
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Edit(int id, PetFormViewModel vm)
+    {
+        if (id != vm.Id) return BadRequest();
+        var pet = await _context.Pets.FindAsync(id);
+        if (pet is null) return NotFound();
+        await Validar(vm);
+        if (pet.TutorId != vm.TutorId &amp;&amp; await _context.Agendamentos.AnyAsync(a =&gt; a.PetId == id))
+            ModelState.AddModelError(&quot;TutorId&quot;, &quot;Pet com agendamentos não pode trocar de tutor. Exclua os agendamentos antes de transferir.&quot;);
+        if (!ModelState.IsValid) { await CarregarTutores(vm.TutorId); return View(vm); }
+        Preencher(pet, vm); await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Delete(int id)
+    {
+        var pet = await _context.Pets.AsNoTracking().Include(p =&gt; p.Tutor).FirstOrDefaultAsync(p =&gt; p.Id == id);
+        return pet is null ? NotFound() : View(pet);
+    }
+    [HttpPost, ActionName(&quot;Delete&quot;), ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; DeleteConfirmed(int id)
+    {
+        var pet = await _context.Pets.FindAsync(id);
+        if (pet is null) return NotFound();
+        if (await _context.Agendamentos.AnyAsync(a =&gt; a.PetId == id))
+        {
+            TempData[&quot;Erro&quot;] = &quot;Pet possui agendamentos e não pode ser excluído.&quot;;
+            return RedirectToAction(nameof(Index));
+        }
+        _context.Remove(pet); await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    private async Task Validar(PetFormViewModel vm)
+    {
+        if (!await _context.Tutores.AnyAsync(t =&gt; t.Id == vm.TutorId))
+            ModelState.AddModelError(&quot;TutorId&quot;, &quot;Tutor inválido.&quot;);
+        if (vm.DataNascimento &gt; DateTime.Today)
+            ModelState.AddModelError(&quot;DataNascimento&quot;, &quot;Nascimento não pode estar no futuro.&quot;);
+    }
+    private static void Preencher(Pet pet, PetFormViewModel vm)
+    {
+        pet.Nome = vm.Nome; pet.Especie = vm.Especie; pet.Raca = vm.Raca;
+        pet.DataNascimento = vm.DataNascimento; pet.TutorId = vm.TutorId;
+    }
+    private async Task CarregarTutores(int? selecionado = null) =&gt;
+        ViewBag.TutorId = new SelectList(await _context.Tutores.OrderBy(t =&gt; t.Nome).ToListAsync(), &quot;Id&quot;, &quot;Nome&quot;, selecionado);
+}</code></pre><div class="checkpoint"><strong>Conferência:</strong> Create recebe PetFormViewModel e copia somente os campos permitidos para uma nova entidade.</div><label class="done"><input type="checkbox" data-step="14" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-15"><div class="stephead"><div class="num">15</div><div><small>ETAPA</small><h2>Implemente agendamentos</h2></div></div><div class="content"><p>Include carrega tutor/pet e OrderBy ordena pela data e hora. Os POSTs rejeitam tutor inexistente, pet de outro tutor, status fora da lista e data ausente. Todos os pets aparecem no seletor identificados pelo tutor; esta versão não depende de AJAX para filtrar o seletor.</p><p>Crie ou substitua <strong>Controllers/AgendamentosController.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Controllers/AgendamentosController.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Controllers/AgendamentosController.cs">using ClinicaVeterinaria.Data;
+using ClinicaVeterinaria.Models;
+using ClinicaVeterinaria.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+namespace ClinicaVeterinaria.Controllers;
+[Authorize]
+public class AgendamentosController : Controller
+{
+    private readonly AppDbContext _context;
+    public AgendamentosController(AppDbContext context) =&gt; _context = context;
+    public async Task&lt;IActionResult&gt; Index()
+    {
+        var dados = await _context.Agendamentos.AsNoTracking()
+            .Include(a =&gt; a.Tutor).Include(a =&gt; a.Pet)
+            .OrderBy(a =&gt; a.DataHora).ToListAsync();
+        return View(dados);
+    }
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Create()
+    {
+        var vm = new AgendamentoFormViewModel { DataHora = DateTime.Now.AddHours(1) };
+        await CarregarListas(vm); return View(vm);
+    }
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Create(AgendamentoFormViewModel vm)
+    {
+        await ValidarRelacao(vm);
+        if (!ModelState.IsValid) { await CarregarListas(vm); return View(vm); }
+        _context.Add(new Agendamento
+        {
+            DataHora = vm.DataHora,
+            Motivo = vm.Motivo,
+            Status = vm.Status,
+            TutorId = vm.
+         TutorId,
+            PetId = vm.PetId
+        });
+        await _context.SaveChangesAsync(); return RedirectToAction(nameof(Index));
+    }
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Edit(int id)
+    {
+        var a = await _context.Agendamentos.FindAsync(id); if (a is null) return NotFound();
+        var vm = new AgendamentoFormViewModel
+        {
+            Id = a.Id,
+            DataHora = a.DataHora,
+            Motivo = a.Motivo,
+            Status = a.Status,
+            TutorId = a.TutorId,
+            PetId = a.PetId
+        };
+        await CarregarListas(vm); return View(vm);
+    }
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Edit(int id, AgendamentoFormViewModel vm)
+    {
+        if (id != vm.Id) return BadRequest(); await ValidarRelacao(vm);
+        if (!ModelState.IsValid) { await CarregarListas(vm); return View(vm); }
+        var a = await _context.Agendamentos.FindAsync(id); if (a is null) return NotFound();
+        a.DataHora = vm.DataHora; a.Motivo = vm.Motivo; a.Status = vm.Status; a.TutorId = vm.TutorId; a.PetId = vm.PetId;
+        await _context.SaveChangesAsync(); return RedirectToAction(nameof(Index));
+    }
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task&lt;IActionResult&gt; Delete(int id)
+    {
+        var a = await _context.Agendamentos.FindAsync(id); if (a is null) return NotFound();
+        _context.Remove(a); await _context.SaveChangesAsync(); return RedirectToAction(nameof(Index));
+    }
+    private async Task ValidarRelacao(AgendamentoFormViewModel vm)
+    {
+        if (!new[] { &quot;Agendado&quot;, &quot;Concluído&quot;, &quot;Cancelado&quot; }.Contains(vm.Status))
+            ModelState.AddModelError(&quot;Status&quot;, &quot;Status inválido.&quot;);
+        if (vm.DataHora == default)
+            ModelState.AddModelError(&quot;DataHora&quot;, &quot;Informe data e hora válidas.&quot;);
+        bool tutorExiste = await _context.Tutores.AnyAsync(t =&gt; t.Id == vm.TutorId);
+        bool petDoTutor = await _context.Pets.AnyAsync(p =&gt; p.Id == vm.PetId &amp;&amp; p.TutorId == vm.TutorId);
+        if (!tutorExiste) ModelState.AddModelError(&quot;TutorId&quot;, &quot;Tutor inválido.&quot;);
+        if (!petDoTutor) ModelState.AddModelError(&quot;PetId&quot;, &quot;O pet selecionado não pertence ao tutor selecionado.&quot;);
+    }
+    private async Task CarregarListas(AgendamentoFormViewModel vm)
+    {
+        vm.Tutores = await _context.Tutores.OrderBy(t =&gt; t.Nome).Select(t =&gt; new SelectListItem(t.Nome, t.Id.
+ToString())).ToListAsync();
+        vm.Pets = await _context.Pets.Include(p =&gt; p.Tutor).OrderBy(p =&gt; p.Nome).Select(p =&gt; new SelectListItem(p.
+Nome + &quot; - &quot; + p.Tutor.Nome, p.Id.ToString())).ToListAsync();
+    }
+}</code></pre><div class="checkpoint"><strong>Conferência:</strong> Salvar pet de tutor diferente deve devolver o formulário com mensagem de erro.</div><label class="done"><input type="checkbox" data-step="15" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-16"><div class="stephead"><div class="num">16</div><div><small>ETAPA</small><h2>Configure Razor e o menu global</h2></div></div><div class="content"><p>Mantenha os Tag Helpers: eles geram links, selects, valores dos campos e token antiforgery em formulários POST. Copie os três arquivos abaixo. Os scripts e o CSS são locais ao projeto.</p><p>Crie ou substitua <strong>Views/_ViewImports.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/_ViewImports.cshtml — código completo</summary><div class="codehead"><strong>Views/_ViewImports.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/_ViewImports.cshtml">﻿@using ClinicaVeterinaria
+@using ClinicaVeterinaria.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers</code></pre></details><p>Crie ou substitua <strong>Views/_ViewStart.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/_ViewStart.cshtml — código completo</summary><div class="codehead"><strong>Views/_ViewStart.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/_ViewStart.cshtml">﻿@{
+    Layout = &quot;_Layout&quot;;
+}</code></pre></details><p>Crie ou substitua <strong>Views/Shared/_Layout.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Shared/_Layout.cshtml — código completo</summary><div class="codehead"><strong>Views/Shared/_Layout.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Shared/_Layout.cshtml">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;@ViewData[&quot;Title&quot;] - Clínica Veterinária&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;~/lib/bootstrap/dist/css/bootstrap.min.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;&lt;nav class=&quot;navbar navbar-expand navbar-light bg-light mb-3&quot;&gt;&lt;div class=&quot;container flex-wrap&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; asp-controller=&quot;Home&quot; asp-action=&quot;Index&quot;&gt;Clínica Veterinária&lt;/a&gt;
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        &lt;div class=&quot;d-flex gap-3 flex-wrap&quot;&gt;
+            &lt;a asp-controller=&quot;Home&quot; asp-action=&quot;Index&quot;&gt;Início&lt;/a&gt;
+            &lt;a asp-controller=&quot;Tutores&quot; asp-action=&quot;Index&quot;&gt;Tutores&lt;/a&gt;
+            &lt;a asp-controller=&quot;Pets&quot; asp-action=&quot;Index&quot;&gt;Pets&lt;/a&gt;
+            &lt;a asp-controller=&quot;Agendamentos&quot; asp-action=&quot;Index&quot;&gt;Agendamentos&lt;/a&gt;
+            &lt;span&gt;@User.Identity.Name&lt;/span&gt;
+            &lt;form asp-controller=&quot;Account&quot; asp-action=&quot;Logout&quot; method=&quot;post&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-sm btn-outline-danger&quot;&gt;Sair&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    }
+&lt;/div&gt;&lt;/nav&gt;&lt;/header&gt;
+&lt;div class=&quot;container&quot;&gt;&lt;main role=&quot;main&quot; class=&quot;pb-3&quot;&gt;@RenderBody()&lt;/main&gt;&lt;/div&gt;
+&lt;script src=&quot;~/lib/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;~/lib/bootstrap/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+@await RenderSectionAsync(&quot;Scripts&quot;, required: false)
+&lt;/body&gt;&lt;/html&gt;</code></pre></details><p>Mantenha também <code>Views/Shared/_ValidationScriptsPartial.cshtml</code> do template. O menu autenticado mostra usuário, recursos e botão Sair.</p><div class="checkpoint"><strong>Conferência:</strong> _ViewImports contém @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers.</div><label class="done"><input type="checkbox" data-step="16" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-17"><div class="stephead"><div class="num">17</div><div><small>ETAPA</small><h2>Crie as views de login e Home</h2></div></div><div class="content"><p>Crie ou substitua <strong>Views/Account/Login.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Account/Login.cshtml — código completo</summary><div class="codehead"><strong>Views/Account/Login.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Account/Login.cshtml">@model ClinicaVeterinaria.ViewModels.LoginViewModel
+ @{
+     ViewData[&quot;Title&quot;] = &quot;Login&quot;;
+ }
+ &lt;div class=&quot;row justify-content-center mt-5&quot;&gt;
+     &lt;div class=&quot;col-md-5&quot;&gt;
+         &lt;div class=&quot;card shadow-sm&quot;&gt;
+&lt;div class=&quot;card-body&quot;&gt;
+                   &lt;h2&gt;Clínica Veterinária&lt;/h2&gt;
+                   &lt;p&gt;Entre para acessar o sistema.&lt;/p&gt;
+                 &lt;form asp-action=&quot;Login&quot; method=&quot;post&quot;&gt;
+                     &lt;div asp-validation-summary=&quot;ModelOnly&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+                     &lt;div class=&quot;mb-3&quot;&gt;
+                         &lt;label asp-for=&quot;Email&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+                         &lt;input asp-for=&quot;Email&quot; class=&quot;form-control&quot; /&gt;
+                         &lt;span asp-validation-for=&quot;Email&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+                     &lt;/div&gt;
+                     &lt;div class=&quot;mb-3&quot;&gt;
+                         &lt;label asp-for=&quot;Senha&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+                         &lt;input asp-for=&quot;Senha&quot; class=&quot;form-control&quot; /&gt;
+                         &lt;span asp-validation-for=&quot;Senha&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+                     &lt;/div&gt;
+                     &lt;button class=&quot;btn btn-primary w-100&quot; type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+                 &lt;/form&gt;
+             &lt;/div&gt;
+         &lt;/div&gt;
+     &lt;/div&gt;
+ &lt;/div&gt;
+ @section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>Crie ou substitua <strong>Views/Home/Index.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Home/Index.cshtml — código completo</summary><div class="codehead"><strong>Views/Home/Index.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Home/Index.cshtml">@{
+      ViewData[&quot;Title&quot;] = &quot;Início&quot;;
+ }
+ &lt;h1&gt;Clínica Veterinária&lt;/h1&gt;
+ &lt;h3&gt;Bem-vindo, @User.Identity?.Name!&lt;/h3&gt;
+ &lt;div class=&quot;d-flex gap-2 mt-4&quot;&gt;
+     &lt;a asp-controller=&quot;Tutores&quot; asp-action=&quot;Index&quot; class=&quot;btn btn-primary&quot;&gt;Tutores&lt;/a&gt;
+     &lt;a asp-controller=&quot;Pets&quot; asp-action=&quot;Index&quot; class=&quot;btn btn-primary&quot;&gt;Pets&lt;/a&gt;
+     &lt;a asp-controller=&quot;Agendamentos&quot; asp-action=&quot;Index&quot; class=&quot;btn btn-primary&quot;&gt;Agendamentos&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;form asp-controller=&quot;Account&quot; asp-action=&quot;Logout&quot; method=&quot;post&quot; class=&quot;mt-4&quot;&gt;
+     &lt;button type=&quot;submit&quot; class=&quot;btn btn-outline-danger&quot;&gt;Sair&lt;/button&gt;
+ &lt;/form&gt;</code></pre></details><div class="checkpoint"><strong>Conferência:</strong> Os dois arquivos existem nos diretórios corretos; o formulário de login envia POST.</div><label class="done"><input type="checkbox" data-step="17" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-18"><div class="stephead"><div class="num">18</div><div><small>ETAPA</small><h2>Crie todas as views de tutores</h2></div></div><div class="content"><p>Incluem busca, listagem, criação, edição e confirmação de exclusão. A view Edit já está completa, com Id oculto e action correta; não é necessário adaptar manualmente Create.</p><p>Crie ou substitua <strong>Views/Tutores/Index.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Tutores/Index.cshtml — código completo</summary><div class="codehead"><strong>Views/Tutores/Index.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Tutores/Index.cshtml">@model IEnumerable&lt;ClinicaVeterinaria.Models.Tutor&gt;
+ &lt;h1&gt;Tutores&lt;/h1&gt;
+ @if (TempData[&quot;Erro&quot;] != null) { &lt;div class=&quot;alert alert-danger&quot;&gt;@TempData[&quot;Erro&quot;]&lt;/div&gt; }
+ &lt;form method=&quot;get&quot; class=&quot;row g-2 mb-3&quot;&gt;
+     &lt;div class=&quot;col&quot;&gt;&lt;input name=&quot;busca&quot; value=&quot;@ViewBag.Busca&quot; class=&quot;form-control&quot; placeholder=&quot;Nome, e-mail ou
+telefone&quot; /&gt;&lt;/div&gt;
+     &lt;div class=&quot;col-auto&quot;&gt;&lt;button class=&quot;btn btn-primary&quot;&gt;Buscar&lt;/button&gt;&lt;/div&gt;
+     &lt;div class=&quot;col-auto&quot;&gt;&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Limpar&lt;/a&gt;&lt;/div&gt;
+ &lt;/form&gt;
+ &lt;a asp-action=&quot;Create&quot; class=&quot;btn btn-success mb-3&quot;&gt;Novo tutor&lt;/a&gt;
+ &lt;table class=&quot;table table-striped&quot;&gt;
+ &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;th&gt;E-mail&lt;/th&gt;&lt;th&gt;Telefone&lt;/th&gt;&lt;th&gt;Ações&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+ &lt;tbody&gt;
+ @foreach (var item in Model) {
+ &lt;tr&gt;&lt;td&gt;@item.Nome&lt;/td&gt;&lt;td&gt;@item.Email&lt;/td&gt;&lt;td&gt;@item.Telefone&lt;/td&gt;&lt;td&gt;
+ &lt;a asp-action=&quot;Edit&quot; asp-route-id=&quot;@item.Id&quot;&gt;Editar&lt;/a&gt; |
+ &lt;a asp-action=&quot;Delete&quot; asp-route-id=&quot;@item.Id&quot;&gt;Excluir&lt;/a&gt;
+ &lt;/td&gt;&lt;/tr&gt; }
+ &lt;/tbody&gt;&lt;/table&gt;</code></pre></details><p>Crie ou substitua <strong>Views/Tutores/Create.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Tutores/Create.cshtml — código completo</summary><div class="codehead"><strong>Views/Tutores/Create.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Tutores/Create.cshtml">@model ClinicaVeterinaria.ViewModels.TutorFormViewModel
+&lt;h1&gt;Novo tutor&lt;/h1&gt;
+&lt;form asp-action=&quot;Create&quot; method=&quot;post&quot;&gt;
+&lt;div asp-validation-summary=&quot;All&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Nome&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Nome&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Nome&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Cpf&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Cpf&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Cpf&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Telefone&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Telefone&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Telefone&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Email&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Email&quot; type=&quot;email&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Email&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Voltar&lt;/a&gt;
+&lt;/form&gt;
+@section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>Crie ou substitua <strong>Views/Tutores/Edit.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Tutores/Edit.cshtml — código completo</summary><div class="codehead"><strong>Views/Tutores/Edit.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Tutores/Edit.cshtml">@model ClinicaVeterinaria.ViewModels.TutorFormViewModel
+&lt;h1&gt;Editar tutor&lt;/h1&gt;
+&lt;form asp-action=&quot;Edit&quot; method=&quot;post&quot;&gt;
+&lt;div asp-validation-summary=&quot;All&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+&lt;input asp-for=&quot;Id&quot; type=&quot;hidden&quot; /&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Nome&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Nome&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Nome&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Cpf&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Cpf&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Cpf&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Telefone&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Telefone&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Telefone&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Email&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Email&quot; type=&quot;email&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Email&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Voltar&lt;/a&gt;
+&lt;/form&gt;
+@section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>Crie ou substitua <strong>Views/Tutores/Delete.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Tutores/Delete.cshtml — código completo</summary><div class="codehead"><strong>Views/Tutores/Delete.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Tutores/Delete.cshtml">@model ClinicaVeterinaria.Models.Tutor
+ &lt;h1&gt;Excluir tutor&lt;/h1&gt;
+ &lt;p&gt;Deseja excluir &lt;strong&gt;@Model.Nome&lt;/strong&gt;?&lt;/p&gt;
+ &lt;form asp-action=&quot;Delete&quot; method=&quot;post&quot;&gt;
+     &lt;input type=&quot;hidden&quot; asp-for=&quot;Id&quot; /&gt;
+     &lt;button class=&quot;btn btn-danger&quot;&gt;Excluir&lt;/button&gt;
+     &lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Cancelar&lt;/a&gt;
+ &lt;/form&gt;</code></pre></details><div class="checkpoint"><strong>Conferência:</strong> Create/Edit usam TutorFormViewModel; Delete usa Tutor.</div><label class="done"><input type="checkbox" data-step="18" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-19"><div class="stephead"><div class="num">19</div><div><small>ETAPA</small><h2>Crie todas as views de pets</h2></div></div><div class="content"><p>Create/Edit usam PetFormViewModel e exibem os erros. O select é preenchido novamente quando o formulário é rejeitado. Delete usa Pet e mostra o tutor carregado pelo controlador.</p><p>Crie ou substitua <strong>Views/Pets/Index.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Pets/Index.cshtml — código completo</summary><div class="codehead"><strong>Views/Pets/Index.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Pets/Index.cshtml">@model IEnumerable&lt;ClinicaVeterinaria.Models.Pet&gt;
+ &lt;h1&gt;Pets&lt;/h1&gt;
+@if (TempData[&quot;Erro&quot;] != null) { &lt;div class=&quot;alert alert-danger&quot;&gt;@TempData[&quot;Erro&quot;]&lt;/div&gt; }
+ &lt;a asp-action=&quot;Create&quot; class=&quot;btn btn-success mb-3&quot;&gt;Novo pet&lt;/a&gt;
+ &lt;table class=&quot;table table-striped&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;th&gt;Espécie&lt;/th&gt;&lt;th&gt;Raça&lt;/th&gt;&lt;th&gt;Tutor&lt;/th&gt;&lt;th&gt;Ações&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+ @foreach (var p in Model) { &lt;tr&gt;&lt;td&gt;@p.Nome&lt;/td&gt;&lt;td&gt;@p.Especie&lt;/td&gt;&lt;td&gt;@p.Raca&lt;/td&gt;&lt;td&gt;@p.Tutor.Nome&lt;/td&gt;&lt;td&gt;&lt;a
+asp-action=&quot;Edit&quot; asp-route-id=&quot;@p.Id&quot;&gt;Editar&lt;/a&gt; | &lt;a asp-action=&quot;Delete&quot; asp-route-id=&quot;@p.Id&quot;&gt;Excluir&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; }
+ &lt;/tbody&gt;&lt;/table&gt;</code></pre></details><p>Crie ou substitua <strong>Views/Pets/Create.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Pets/Create.cshtml — código completo</summary><div class="codehead"><strong>Views/Pets/Create.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Pets/Create.cshtml">@model ClinicaVeterinaria.ViewModels.PetFormViewModel
+&lt;h1&gt;Novo pet&lt;/h1&gt;
+&lt;form asp-action=&quot;Create&quot; method=&quot;post&quot;&gt;
+&lt;div asp-validation-summary=&quot;All&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Nome&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Nome&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Nome&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Especie&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Especie&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Especie&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Raca&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Raca&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Raca&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;DataNascimento&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;DataNascimento&quot; type=&quot;date&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;DataNascimento&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;TutorId&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;TutorId&quot; asp-items=&quot;ViewBag.TutorId&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecione...&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;TutorId&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Voltar&lt;/a&gt;
+&lt;/form&gt;
+@section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>Crie ou substitua <strong>Views/Pets/Edit.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Pets/Edit.cshtml — código completo</summary><div class="codehead"><strong>Views/Pets/Edit.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Pets/Edit.cshtml">@model ClinicaVeterinaria.ViewModels.PetFormViewModel
+&lt;h1&gt;Editar pet&lt;/h1&gt;
+&lt;form asp-action=&quot;Edit&quot; method=&quot;post&quot;&gt;
+&lt;div asp-validation-summary=&quot;All&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+&lt;input asp-for=&quot;Id&quot; type=&quot;hidden&quot; /&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Nome&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Nome&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Nome&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Especie&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Especie&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Especie&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Raca&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Raca&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Raca&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;DataNascimento&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;DataNascimento&quot; type=&quot;date&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;DataNascimento&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;TutorId&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;TutorId&quot; asp-items=&quot;ViewBag.TutorId&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecione...&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;TutorId&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Voltar&lt;/a&gt;
+&lt;/form&gt;
+@section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>Crie ou substitua <strong>Views/Pets/Delete.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Pets/Delete.cshtml — código completo</summary><div class="codehead"><strong>Views/Pets/Delete.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Pets/Delete.cshtml">@model ClinicaVeterinaria.Models.Pet
+ &lt;h1&gt;Excluir pet&lt;/h1&gt;
+ &lt;p&gt;Deseja excluir &lt;strong&gt;@Model.Nome&lt;/strong&gt;? (tutor: @Model.Tutor.Nome)&lt;/p&gt;
+ &lt;form asp-action=&quot;Delete&quot; method=&quot;post&quot;&gt;
+     &lt;input type=&quot;hidden&quot; asp-for=&quot;Id&quot; /&gt;
+     &lt;button class=&quot;btn btn-danger&quot;&gt;Excluir&lt;/button&gt;
+     &lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Cancelar&lt;/a&gt;
+ &lt;/form&gt;</code></pre></details><div class="checkpoint"><strong>Conferência:</strong> Há quatro arquivos completos, com nomes idênticos aos nomes das actions.</div><label class="done"><input type="checkbox" data-step="19" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-20"><div class="stephead"><div class="num">20</div><div><small>ETAPA</small><h2>Crie as views de agendamentos</h2></div></div><div class="content"><p>A prova pede todos os dados de tutor/pet. A listagem mostra Id, nome, CPF recuperado, telefone e e-mail do tutor; Id, nome, espécie, raça, nascimento e TutorId do pet, além dos dados do agendamento. O CPF continua cifrado no banco. A rota é protegida. Campos opcionais aparecem como não informados.</p><p>Crie ou substitua <strong>Views/Agendamentos/Index.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Agendamentos/Index.cshtml — código completo</summary><div class="codehead"><strong>Views/Agendamentos/Index.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Agendamentos/Index.cshtml">@model IEnumerable&lt;ClinicaVeterinaria.Models.Agendamento&gt;
+@inject ClinicaVeterinaria.Services.CriptografiaService Crypto
+&lt;h1&gt;Agendamentos&lt;/h1&gt;
+&lt;a asp-action=&quot;Create&quot; class=&quot;btn btn-success mb-3&quot;&gt;Novo agendamento&lt;/a&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-striped&quot;&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Id / Data&lt;/th&gt;&lt;th&gt;Tutor (todos os dados)&lt;/th&gt;&lt;th&gt;Pet (todos os dados)&lt;/th&gt;&lt;th&gt;Motivo&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Ações&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+@foreach (var a in Model)
+{
+    &lt;tr&gt;&lt;td&gt;@a.DataHora.ToString(&quot;dd/MM/yyyy HH:mm&quot;)&lt;/td&gt;
+    &lt;td&gt;Id: @a.Tutor.Id | @a.Tutor.Nome&lt;br /&gt;CPF: @Crypto.Descriptografar(a.Tutor.CpfCriptografado)&lt;br /&gt;
+    Telefone: @a.Tutor.Telefone&lt;br /&gt;E-mail: @a.Tutor.Email&lt;/td&gt;
+    &lt;td&gt;Id: @a.Pet.Id | @a.Pet.Nome&lt;br /&gt;Espécie: @a.Pet.Especie&lt;br /&gt;Raça: @(a.Pet.Raca ?? &quot;Não informada&quot;)&lt;br /&gt;
+    Nascimento: @(a.Pet.DataNascimento?.ToString(&quot;dd/MM/yyyy&quot;) ?? &quot;Não informado&quot;)&lt;br /&gt;TutorId: @a.Pet.TutorId&lt;/td&gt;
+    &lt;td&gt;@a.Motivo&lt;/td&gt;&lt;td&gt;@a.Status&lt;/td&gt;&lt;td&gt;
+    Agendamento: @a.Id&lt;br /&gt;&lt;a asp-action=&quot;Edit&quot; asp-route-id=&quot;@a.Id&quot;&gt;Editar&lt;/a&gt;
+    &lt;form asp-action=&quot;Delete&quot; asp-route-id=&quot;@a.Id&quot; method=&quot;post&quot; class=&quot;d-inline&quot;&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-link text-danger p-0&quot; onclick=&quot;return confirm(&#x27;Excluir agendamento?&#x27;)&quot;&gt;Excluir&lt;/button&gt;
+    &lt;/form&gt;&lt;/td&gt;&lt;/tr&gt;
+}
+&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;</code></pre></details><p>Crie ou substitua <strong>Views/Agendamentos/Create.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Agendamentos/Create.cshtml — código completo</summary><div class="codehead"><strong>Views/Agendamentos/Create.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Agendamentos/Create.cshtml">@model ClinicaVeterinaria.ViewModels.AgendamentoFormViewModel
+&lt;h1&gt;Novo agendamento&lt;/h1&gt;
+&lt;form asp-action=&quot;Create&quot; method=&quot;post&quot;&gt;
+&lt;div asp-validation-summary=&quot;All&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;DataHora&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;DataHora&quot; type=&quot;datetime-local&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;DataHora&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;TutorId&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;TutorId&quot; asp-items=&quot;Model.Tutores&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecione...&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;TutorId&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;PetId&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;PetId&quot; asp-items=&quot;Model.Pets&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecione...&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;PetId&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Motivo&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Motivo&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Motivo&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Status&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;Status&quot; class=&quot;form-select&quot;&gt;&lt;option&gt;Agendado&lt;/option&gt;&lt;option&gt;Concluído&lt;/option&gt;&lt;option&gt;Cancelado&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;Status&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Voltar&lt;/a&gt;
+&lt;/form&gt;
+@section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>Crie ou substitua <strong>Views/Agendamentos/Edit.cshtml</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><details><summary>Views/Agendamentos/Edit.cshtml — código completo</summary><div class="codehead"><strong>Views/Agendamentos/Edit.cshtml</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Views/Agendamentos/Edit.cshtml">@model ClinicaVeterinaria.ViewModels.AgendamentoFormViewModel
+&lt;h1&gt;Editar agendamento&lt;/h1&gt;
+&lt;form asp-action=&quot;Edit&quot; method=&quot;post&quot;&gt;
+&lt;div asp-validation-summary=&quot;All&quot; class=&quot;text-danger&quot;&gt;&lt;/div&gt;
+&lt;input asp-for=&quot;Id&quot; type=&quot;hidden&quot; /&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;DataHora&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;DataHora&quot; type=&quot;datetime-local&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;DataHora&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;TutorId&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;TutorId&quot; asp-items=&quot;Model.Tutores&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecione...&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;TutorId&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;PetId&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;PetId&quot; asp-items=&quot;Model.Pets&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;&quot;&gt;Selecione...&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;PetId&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Motivo&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;input asp-for=&quot;Motivo&quot; type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;span asp-validation-for=&quot;Motivo&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;mb-3&quot;&gt;&lt;label asp-for=&quot;Status&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+&lt;select asp-for=&quot;Status&quot; class=&quot;form-select&quot;&gt;&lt;option&gt;Agendado&lt;/option&gt;&lt;option&gt;Concluído&lt;/option&gt;&lt;option&gt;Cancelado&lt;/option&gt;&lt;/select&gt;
+&lt;span asp-validation-for=&quot;Status&quot; class=&quot;text-danger&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Salvar&lt;/button&gt;
+&lt;a asp-action=&quot;Index&quot; class=&quot;btn btn-secondary&quot;&gt;Voltar&lt;/a&gt;
+&lt;/form&gt;
+@section Scripts { &lt;partial name=&quot;_ValidationScriptsPartial&quot; /&gt; }</code></pre></details><p>A exclusão usa um formulário POST na listagem e confirmação no navegador, por isso não existe uma view Delete de agendamento.</p><div class="checkpoint"><strong>Conferência:</strong> A tabela está ordenada pelo controlador e nenhum relacionamento depende de lazy loading.</div><label class="done"><input type="checkbox" data-step="20" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-21"><div class="stephead"><div class="num">21</div><div><small>ETAPA</small><h2>Configure Program.cs, compile e crie o banco</h2></div></div><div class="content"><p>Todos os arquivos das etapas anteriores precisam existir antes deste passo. Substitua Program.cs inteiro. Authentication vem antes de Authorization; a rota padrão é Home/Index e redireciona anônimos ao login.</p><p>Crie ou substitua <strong>Program.cs</strong>. Copie o bloco inteiro; não acrescente ao conteúdo antigo.</p><div class="codehead"><strong>Program.cs</strong><button type="button" class="copy">Copiar</button></div><pre><code data-file="Program.cs">using ClinicaVeterinaria.Data;
+using ClinicaVeterinaria.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+// Os três modos abaixo são flags sem valor; retire-as do parser de configuração.
+var modos = new[] { &quot;--importar-sql&quot;, &quot;--verificar-banco&quot;, &quot;--exportar-sql&quot; };
+var builder = WebApplication.CreateBuilder(args.Where(a =&gt; !modos.Contains(a)).ToArray());
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext&lt;AppDbContext&gt;(options =&gt;
+    options.UseSqlServer(builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;)));
+builder.Services.AddScoped&lt;TokenService&gt;();
+builder.Services.AddScoped&lt;CriptografiaService&gt;();
+var jwtKey = builder.Configuration[&quot;Jwt:Key&quot;]
+    ?? throw new InvalidOperationException(&quot;Jwt:Key não configurada.&quot;);
+builder.Services
+    .AddAuthentication(options =&gt;
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =&gt;
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration[&quot;Jwt:Issuer&quot;],
+            ValidAudience = builder.Configuration[&quot;Jwt:Audience&quot;],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+            ClockSkew = TimeSpan.Zero
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =&gt;
+             {
+                   context.Token = context.Request.Cookies[&quot;jwt&quot;];
+                   return Task.CompletedTask;
+               },
+            OnChallenge = context =&gt;
+             {
+                   context.HandleResponse();
+                   context.Response.Redirect(&quot;/Account/Login&quot;);
+                   return Task.CompletedTask;
+               }
+        };
+    });
+builder.Services.AddAuthorization();
+var app = builder.Build();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler(&quot;/Home/Error&quot;);
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllerRoute(
+name: &quot;default&quot;,
+     pattern: &quot;{controller=Home}/{action=Index}/{id?}&quot;);
+if (args.Contains(&quot;--importar-sql&quot;))
+{
+    await SqlEntrega.ImportarAsync(app.Services, builder.Configuration[&quot;arquivo&quot;] ?? &quot;../../saep_db.sql&quot;);
+    return;
+}
+if (args.Contains(&quot;--verificar-banco&quot;))
+{
+    await SqlEntrega.VerificarAsync(app.Services);
+    return;
+}
+await DbInitializer.SeedAsync(app.Services);
+if (args.Contains(&quot;--exportar-sql&quot;))
+{
+    await SqlEntrega.ExportarAsync(app.Services,
+        builder.Configuration[&quot;arquivo&quot;] ?? &quot;../../saep_db.sql&quot;,
+        builder.Configuration[&quot;banco&quot;] ?? &quot;ClinicaVetDb&quot;);
+    return;
+}
+app.Run();</code></pre><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet build --no-restore
+$env:ASPNETCORE_ENVIRONMENT = &quot;Development&quot;
+dotnet ef migrations add CriacaoInicial
+dotnet ef database update</code></pre><p>O build deve encerrar sem erros. Crie <code>CriacaoInicial</code> somente uma vez. Em execuções seguintes use apenas <code>dotnet ef database update</code>. O EF cria o banco, as tabelas e <code>__EFMigrationsHistory</code>; o seed de negócio será executado na primeira inicialização/exportação.</p><div class="tip">A tabela __EFMigrationsHistory é controle interno do EF e tem uma linha por migration. A exigência de três registros deste laboratório é aplicada às quatro tabelas de negócio. Não invente registros na tabela de histórico para aumentar sua contagem.</div><div class="checkpoint"><strong>Conferência:</strong> Banco ClinicaVetDb criado; tabelas Usuarios, Tutores, Pets e Agendamentos existem.</div><label class="done"><input type="checkbox" data-step="21" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-22"><div class="stephead"><div class="num">22</div><div><small>ETAPA</small><h2>Execute em HTTPS e faça a primeira conferência</h2></div></div><div class="content"><p>Na pasta sistema, execute o bloco. A trust do certificado pode abrir uma confirmação do Windows. A porta é fixada para este roteiro; se estiver ocupada, escolha outra porta em todos os testes.</p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet dev-certs https --trust
+$env:ASPNETCORE_ENVIRONMENT = &quot;Development&quot;
+dotnet run --no-build --no-launch-profile --urls &quot;https://localhost:7243&quot;</code></pre><p>Abra <strong>https://localhost:7243</strong> no navegador. Entre com <code>admin@clinica.com / Admin@123</code>. Verifique nome Administrador, menu e 3 registros em cada listagem. Se criou dados durante os testes, mantenha ao menos 3 em cada tabela ao entregar.</p><p>Para parar o servidor, pressione Ctrl+C no terminal. Antes de executar outra operação dotnet que recompila, pare esse servidor para evitar arquivo DLL bloqueado.</p><div class="checkpoint"><strong>Conferência:</strong> Login válido abre Home; senha errada apresenta mensagem; /Home/Index sem login redireciona.</div><label class="done"><input type="checkbox" data-step="22" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-23"><div class="stephead"><div class="num">23</div><div><small>ETAPA</small><h2>Gere e confira saep_db.sql com dados</h2></div></div><div class="content"><p>Pare a aplicação. O comando abaixo inicializa os exemplos se as tabelas estiverem vazias e exporta schema e dados do banco configurado. Execute dentro de sistema; o arquivo fica na pasta pai, ao lado de sistema.</p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>dotnet run --no-build --no-launch-profile -- --exportar-sql --arquivo=../saep_db.sql --banco=ClinicaVetDb
+dotnet run --no-build --no-launch-profile -- --verificar-banco</code></pre><p>Abra o arquivo e confirme CREATE TABLE, PRIMARY KEY, FOREIGN KEY, índices e ao menos 3 INSERTs para cada tabela de negócio. As senhas são hashes BCrypt; os CPFs são cifras AES-GCM. <strong>dotnet ef migrations script sozinho geraria somente estrutura neste projeto</strong>, pois a população está no DbInitializer, não na migration.</p><p>Para testar sem tocar no banco em uso: no SSMS, abra uma cópia do SQL, troque o nome ClinicaVetDb no cabeçalho por ClinicaVetConferencia, execute toda a cópia e confira as contagens. Não use um banco existente com dados de outras atividades. Configure temporariamente a conexão para essa cópia e as mesmas chaves; confira login e edição de CPF. O exportador preserva Ids, relacionamentos e histórico de migration. O script pode ser repetido; ele insere Ids ausentes, mas não atualiza registros já existentes.</p><div class="codehead"><strong>SQL — execute no banco escolhido no SSMS</strong><button type="button" class="copy">Copiar</button></div><pre><code>SELECT &#x27;Usuarios&#x27; AS Tabela, COUNT(*) AS Quantidade FROM Usuarios
+UNION ALL SELECT &#x27;Tutores&#x27;, COUNT(*) FROM Tutores
+UNION ALL SELECT &#x27;Pets&#x27;, COUNT(*) FROM Pets
+UNION ALL SELECT &#x27;Agendamentos&#x27;, COUNT(*) FROM Agendamentos;
+
+SELECT Id, Nome, CpfCriptografado FROM Tutores;
+SELECT Id, Email, SenhaHash FROM Usuarios;</code></pre><div class="tip">Reexecutar o SQL não deve duplicar os registros. Para a entrega, regenere seu próprio arquivo após os testes: o saep_db.sql de exemplo disponibilizado neste material foi cifrado com as chaves do ambiente de validação do professor, não com as suas.</div><div class="checkpoint"><strong>Conferência:</strong> SQL executado em banco novo cria e popula as quatro tabelas; login e descriptografia usam as chaves originais.</div><label class="done"><input type="checkbox" data-step="23" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-24"><div class="stephead"><div class="num">24</div><div><small>ETAPA</small><h2>Produza documentação e diagrama ER</h2></div></div><div class="content"><p>O PDF não traz o Anexo 1. Use o modelo abaixo para treino e ajuste ao formulário do avaliador; não entregue campos em branco. Inclua identificação, objetivo, requisitos funcionais, regras, segurança, estrutura de dados, instalação e evidências dos testes.</p><p><a href="documentacao_modelo.html">Abrir modelo editável para impressão</a> · <a href="documentacao_modelo.pdf">Modelo em PDF</a> · <a href="diagrama_er.pdf">Diagrama ER em PDF</a> · <a href="diagrama_er.svg">Diagrama SVG</a></p><div class="tablewrap"><table><thead><tr><th>Id</th><th>Requisito</th></tr></thead><tbody><tr><td>RF01</td><td>Autenticar por e-mail e senha; recusar credenciais inválidas com mensagem genérica.</td></tr><tr><td>RF02</td><td>Expirar a autenticação após 30 minutos e exigir novo login.</td></tr><tr><td>RF03</td><td>Exibir nome do usuário, links dos recursos e logout na Home.</td></tr><tr><td>RF04</td><td>Cadastrar, listar, editar e excluir tutores; impedir exclusão com dependências.</td></tr><tr><td>RF05</td><td>Buscar tutores por termo confirmado em nome, e-mail ou telefone.</td></tr><tr><td>RF06</td><td>Cifrar CPF antes de gravar e recuperá-lo somente em telas autenticadas.</td></tr><tr><td>RF07</td><td>Gerenciar pets com associação obrigatória a um tutor existente.</td></tr><tr><td>RF08</td><td>Gerenciar agendamentos, validando que o pet pertence ao tutor.</td></tr><tr><td>RF09</td><td>Listar agendamentos por data/hora crescente com todos os dados do tutor e pet.</td></tr><tr><td>RF10</td><td>Gerar script com estrutura e pelo menos três registros nas quatro tabelas de negócio.</td></tr></tbody></table></div><p>O diagrama abaixo representa o modelo deste projeto. Cada pet pertence a um tutor; cada agendamento aponta para um tutor e um pet. Usuario é independente das tabelas operacionais porque o enunciado não exige registrar o autor de cada cadastro.</p><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 630" role="img" aria-label="Diagrama entidade relacionamento da clínica veterinária">
+<rect width="1100" height="630" fill="white"/>
+<g fill="#eaf5fc" stroke="#005ca9" stroke-width="2">
+<rect x="20" y="30" width="270" height="230" rx="8"/><rect x="360" y="30" width="310" height="230" rx="8"/>
+<rect x="780" y="30" width="300" height="255" rx="8"/><rect x="450" y="365" width="350" height="245" rx="8"/>
+</g><g font-family="Arial" fill="#172533" font-size="18">
+<text x="40" y="62" font-weight="bold">USUARIO</text><text x="40" y="98">PK Id: int</text><text x="40" y="130">Nome: nvarchar(100)</text><text x="40" y="160">Email: nvarchar(150) UNIQUE</text><text x="40" y="190">SenhaHash: nvarchar(max)</text><text x="40" y="220">Perfil: nvarchar(30)</text>
+<text x="380" y="62" font-weight="bold">TUTOR</text><text x="380" y="98">PK Id: int</text><text x="380" y="130">Nome: nvarchar(120)</text><text x="380" y="160">CpfCriptografado: nvarchar(max)</text><text x="380" y="190">Telefone: nvarchar(20)</text><text x="380" y="220">Email: nvarchar(150)</text>
+<text x="800" y="62" font-weight="bold">PET</text><text x="800" y="98">PK Id: int</text><text x="800" y="130">Nome: nvarchar(80)</text><text x="800" y="160">Especie: nvarchar(50)</text><text x="800" y="190">Raca: nvarchar(80) NULL</text><text x="800" y="220">DataNascimento: datetime2 NULL</text><text x="800" y="250">FK TutorId: int NOT NULL</text>
+<text x="470" y="398" font-weight="bold">AGENDAMENTO</text><text x="470" y="432">PK Id: int</text><text x="470" y="464">DataHora: datetime2 NOT NULL</text><text x="470" y="496">Motivo: nvarchar(200)</text><text x="470" y="528">Status: nvarchar(30)</text><text x="470" y="560">FK TutorId: int NOT NULL</text><text x="470" y="592">FK PetId: int NOT NULL</text>
+</g><g stroke="#005ca9" stroke-width="3" fill="none"><path d="M670 130H780"/><path d="M500 260V365"/><path d="M930 285V480H800"/></g>
+<g font-family="Arial" fill="#005ca9" font-size="20" font-weight="bold"><text x="680" y="117">1</text><text x="741" y="117">0..N</text><text x="510" y="285">1</text><text x="510" y="350">0..N</text><text x="941" y="309">1</text><text x="808" y="466">0..N</text></g></svg></div><p>No navegador, abra o modelo de documentação, use Ctrl+P, escolha Salvar como PDF e nomeie o arquivo <code>documentacao.pdf</code>. O PDF fornecido é uma referência com campos a preencher. O diagrama pode ser entregue como PDF; mantenha-o coerente com qualquer alteração feita no código.</p><div class="checkpoint"><strong>Conferência:</strong> documentacao.pdf adaptado ao Anexo 1 e diagrama_er.pdf com as quatro entidades, atributos, PK, FK e cardinalidades.</div><label class="done"><input type="checkbox" data-step="24" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-25"><div class="stephead"><div class="num">25</div><div><small>ETAPA</small><h2>Teste, organize e compacte a entrega</h2></div></div><div class="content"><div class="tablewrap"><table><thead><tr><th>Nº</th><th>Teste</th><th>Resultado esperado</th></tr></thead><tbody><tr><td>1</td><td>/Home/Index sem login</td><td>Redireciona para /Account/Login.</td></tr><tr><td>2</td><td>Senha incorreta e depois correta</td><td>Mensagem genérica; login correto exibe Administrador.</td></tr><tr><td>3</td><td>Busca João e depois Limpar</td><td>Somente correspondências; Limpar restaura listagem.</td></tr><tr><td>4</td><td>Criar/editar/excluir tutor sem dependências</td><td>Dados persistem; CPF recuperado na edição.</td></tr><tr><td>5</td><td>Criar pet sem tutor e com tutor válido</td><td>Primeiro rejeitado; segundo salvo associado.</td></tr><tr><td>6</td><td>Editar/excluir pet</td><td>Grava alterações; bloqueia exclusão se houver agenda.</td></tr><tr><td>7</td><td>Agenda com pet de outro tutor</td><td>Servidor rejeita, sem perder as listas do formulário.</td></tr><tr><td>8</td><td>Criar/editar/excluir agenda válida</td><td>Todas as operações persistem e a lista segue ordenada.</td></tr><tr><td>9</td><td>Agenda e dados de tutor/pet</td><td>Mostra CPF, contato, espécie, raça e nascimento, além de nomes/Ids.</td></tr><tr><td>10</td><td>Trocar tutor de pet agendado</td><td>Rejeita e mantém as relações consistentes.</td></tr><tr><td>11</td><td>Excluir tutor com pet/agenda</td><td>Exibe mensagem e mantém cadastro.</td></tr><tr><td>12</td><td>Expiração de JWT</td><td>Após 30 minutos, próxima página protegida exige login. Para ensaio rápido altere para 1 minuto, reinicie e faça novo login; restaure 30 ao finalizar.</td></tr><tr><td>13</td><td>Sair e tentar abrir recursos</td><td>Cookie removido; recursos pedem login.</td></tr><tr><td>14</td><td>Inspecionar banco e aplicar SQL em banco novo</td><td>3+ registros por tabela de negócio, FKs válidas, CPF cifrado e senha com hash.</td></tr></tbody></table></div><p>Após testar, devolva Jwt:ExpireMinutes para 30, confira os três registros por tabela e regenere o SQL. Na pasta pai de sistema, organize:</p><div class="codehead"><strong>Estrutura final</strong><button type="button" class="copy">Copiar</button></div><pre><code>Seu Nome Completo/
+├── documentacao.pdf
+├── diagrama_er.pdf
+├── saep_db.sql
+└── sistema/
+    ├── ClinicaVeterinaria.csproj
+    ├── Controllers/, Models/, ViewModels/
+    ├── Data/, Services/, Views/, wwwroot/
+    ├── Migrations/
+    ├── .config/dotnet-tools.json
+    ├── appsettings.json e Program.cs
+    └── README.md</code></pre><p>Inclua Migrations, manifesto local e recursos estáticos. Oculte/remova da cópia para entrega bin e obj; mantenha o código original na sua pasta de trabalho. O README deve explicar SQL Server, comandos de execução, credenciais fictícias e configuração das chaves no outro ambiente. User Secrets não acompanha a cópia.</p><div class="codehead"><strong>PowerShell</strong><button type="button" class="copy">Copiar</button></div><pre><code>$nomeAluno = &quot;Seu Nome Completo&quot;
+$pastaEntrega = Join-Path (Get-Location) $nomeAluno
+New-Item -ItemType Directory -Force $pastaEntrega | Out-Null
+Copy-Item -LiteralPath .\documentacao.pdf, .\diagrama_er.pdf, .\saep_db.sql -Destination $pastaEntrega
+robocopy .\sistema (Join-Path $pastaEntrega &quot;sistema&quot;) /E /XD bin obj .git
+if ($LASTEXITCODE -ge 8) { throw &quot;Falha ao copiar o código com robocopy.&quot; }
+$areaTrabalho = [Environment]::GetFolderPath(&quot;Desktop&quot;)
+$arquivoZip = Join-Path $areaTrabalho ($nomeAluno + &quot;.zip&quot;)
+Compress-Archive -LiteralPath $pastaEntrega -DestinationPath $arquivoZip</code></pre><p>Esse bloco é executado <strong>na pasta pai de sistema</strong>, depois de criar documentacao.pdf. Substitua Seu Nome Completo pelo nome real. Robocopy pode retornar códigos 1–7 sem falha. Se já houver um ZIP com esse nome, escolha um novo nome para a revisão. Abra o ZIP e confira os quatro itens; teste a cópia conforme as orientações do avaliador.</p><div class="checkpoint"><strong>Conferência:</strong> ZIP na Área de Trabalho com nome completo e todos os arquivos abertos/conferidos.</div><label class="done"><input type="checkbox" data-step="25" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-26"><div class="stephead"><div class="num">26</div><div><small>ETAPA</small><h2>Resolva os erros mais comuns</h2></div></div><div class="content"><div class="tablewrap"><table><thead><tr><th>Sintoma</th><th>Causa / ação</th></tr></thead><tbody><tr><td>Pacote incompatível com net8.0</td><td>Use as versões explícitas da etapa 4; não instale a última principal sem conferir.</td></tr><tr><td>Comando PowerShell GetBytes(n) falha</td><td>Use o gerador de instância e os arrays da etapa 5, compatíveis com PowerShell 5.1.</td></tr><tr><td>Newline em constante / erros de sintaxe</td><td>Copie um bloco completo do HTML revisado; não misture o material original nem quebre textos entre aspas.</td></tr><tr><td>Jwt:Key ou Encryption:Key não configurada</td><td>Confira projeto, UserSecretsId no csproj e Development. Em outro computador, reconfigure as chaves.</td></tr><tr><td>Encryption:Key deve ter 32 bytes</td><td>Base64 precisa representar exatamente 32 bytes, não 32 caracteres.</td></tr><tr><td>Falha de autenticação AES-GCM</td><td>A chave AES mudou, a carga veio de outro ambiente ou o valor foi corrompido. Recupere a chave usada na carga; não gere outra.</td></tr><tr><td>Erro SQL de conexão</td><td>Confira serviço, instância, autenticação Windows e string JSON. TrustServerCertificate é uma opção local de treino.</td></tr><tr><td>Migration/DbContext não encontrado</td><td>Execute dentro de sistema; confira pacote Design, manifesto EF8, namespace e AddDbContext.</td></tr><tr><td>DLL bloqueada durante build</td><td>Pare dotnet run com Ctrl+C e compile novamente.</td></tr><tr><td>Login volta à tela ou cookie não é enviado</td><td>Abra HTTPS, confira Secure, certificado, OnMessageReceived e ordem dos middlewares.</td></tr><tr><td>Pet não grava / Tutor é obrigatório</td><td>Use PetFormViewModel no formulário e no POST; não envie a entidade Pet diretamente.</td></tr><tr><td>404 em /Home ou /Tutores</td><td>A rota padrão deve ter action=Index. O original usava action=Login, causando 404 nos links curtos.</td></tr><tr><td>View não encontrada / select vazio</td><td>Confira nome/caminho das views e a recarga das listas em caso de erro.</td></tr><tr><td>Excluir tutor/pet é bloqueado</td><td>Exclua primeiro os agendamentos e os pets dependentes; não remova FKs.</td></tr><tr><td>SQL gerado sem INSERTs</td><td>Use --exportar-sql. Seed em C# não é incluído automaticamente em migrations script.</td></tr><tr><td>Exportação exige três registros</td><td>Reponha os registros nas tabelas de negócio; o seed não repõe tabelas parcialmente preenchidas.</td></tr></tbody></table></div><label class="done"><input type="checkbox" data-step="26" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-27"><div class="stephead"><div class="num">27</div><div><small>ETAPA</small><h2>Organize o treino nas três horas</h2></div></div><div class="content"><p>Os tempos abaixo são os indicados pelo PDF (somam 180 minutos). Use as etapas anteriores para aprender e ensaiar, depois simule com ambiente pronto, sem internet e com cronômetro. A transcrição de todo este roteiro pode ultrapassar esse tempo; a preparação é essencial.</p><div class="tablewrap"><table><thead><tr><th>Entrega</th><th>Minutos</th></tr></thead><tbody><tr><td>Documentação</td><td>15</td></tr><tr><td>Diagrama ER</td><td>5</td></tr><tr><td>Script de criação e população</td><td>20</td></tr><tr><td>Login</td><td>20</td></tr><tr><td>Funcionalidade principal</td><td>20</td></tr><tr><td>Tutores</td><td>30</td></tr><tr><td>Pets</td><td>30</td></tr><tr><td>Agendamentos</td><td>40</td></tr></tbody></table></div><div class="tip">Registre em qual etapa perdeu tempo e repita esse fluxo. Durante a ambientação, confira o ambiente e leia todas as entregas. Preserve tempo de conferência dentro dos blocos; não deixe a geração do SQL e o ZIP para depois do término.</div><label class="done"><input type="checkbox" data-step="27" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section><section class="step" id="step-28"><div class="stephead"><div class="num">28</div><div><small>ETAPA</small><h2>Notas de validação para o professor</h2></div></div><div class="content"><p>Este material foi revisado a partir do HTML e do PDF fornecidos. O código foi reconstruído do HTML original: a primeira compilação encontrou 24 erros por quebras de texto. Após correção de formatação, o login, as listagens e a busca funcionaram, mas o cadastro de pet válido falhou. A versão corrigida passou nos 31 testes HTTP registrados em <code>validacao/resultado_fluxos.json</code>.</p><p>Ambiente: SDK 8.0.303, EF/JWT 8.0.23, BCrypt 4.0.3, SQL Server Express local, HTTPS em localhost:7243. A carga foi verificada com 3 registros em cada tabela e o SQL foi aplicado em banco separado, sem chamar o inicializador; BCrypt, AES-GCM e associações foram conferidos. O certificado local não estava confiado no ambiente automatizado: os testes HTTP ignoraram sua confiança exclusivamente para localhost. O aluno deve confiar o certificado pelo comando da etapa 22.</p><p>O modelo de documentação e o DER foram gerados como exemplos coerentes com o projeto. O Anexo 1 não foi disponibilizado. A compactação na Área de Trabalho e a experiência visual no navegador não fizeram parte dos testes automatizados; faça essa conferência final com a turma.</p><p>Referências técnicas: <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0">Validação MVC</a>, <a href="https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/applying">Aplicação de migrations</a> e <a href="https://learn.microsoft.com/en-us/ef/core/cli/dotnet">Ferramentas EF Core</a>. O roteiro não depende de abrir esses links durante a execução.</p><label class="done"><input type="checkbox" data-step="28" /> Etapa concluída</label></div><a class="back" href="#top">↑ Voltar ao topo</a></section></main></div><footer>Material didático revisado · 02/10/2026 · PDF original preservado · Anexo 1 não fornecido</footer><script>
+document.querySelectorAll('.copy').forEach(button=>button.addEventListener('click',async()=>{
+const content=button.parentElement.nextElementSibling.querySelector('code').textContent;
+try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(content)}else{
+const area=document.createElement('textarea');area.value=content;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();if(!document.execCommand('copy'))throw Error('copy');area.remove()}
+button.textContent='Copiado!';setTimeout(()=>button.textContent='Copiar',1600)
+}catch(error){button.textContent='Selecione o código';const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(button.parentElement.nextElementSibling);selection.removeAllRanges();selection.addRange(range)}}));
+document.querySelectorAll('[data-step]').forEach(input=>{try{input.checked=localStorage.getItem('saep-refinado-'+input.dataset.step)==='1'}catch(e){}input.addEventListener('change',()=>{try{localStorage.setItem('saep-refinado-'+input.dataset.step,input.checked?'1':'0')}catch(e){}})});
+document.querySelector('.printbtn').addEventListener('click',()=>{document.querySelectorAll('details').forEach(d=>d.open=true);window.print()});
+</script></body></html>
